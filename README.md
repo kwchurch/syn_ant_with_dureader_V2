@@ -1,4 +1,4 @@
-# syn_ant_with_dureader
+# syn_ant_with_dureader_V2
 
 
 ```sh
@@ -6,4 +6,4 @@ cd /mnt/home/kwc/papers/syn_ant_with_dureader/MoE-ASD-main/DuReader-yesno_for_sy
 ./run_syn_ant.sh > run_syn_ant.out 2>&1
 ```
 
-# syn_ant_with_dureader_V2
+See run_syn_ant.out for error msgs

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+tag_file=$1
+cos_and_edit=$2
+paths=$3
+VAD=$4
+
+awk -v VAD=$VAD 'function dist(a,b) {if(a in V && b in V) { dV = V[a] - V[b]; dA = A[a] - A[b]; dD = D[a] - D[b]; return sqrt(dV*dV + dA*dA + dD*dD)} else {return "NA"}}
+                 function antmorph(a,b) {dlen = length(b) - length(a)
+		 	  if(dlen == 0) return 0
+			  if(dlen < 0) return antmorph(b,a)
+			  if(substr(b, 1, length(a)) == a && substr(b, length(a)+1) in antsuffix) return 1
+			  if(substr(b, dlen+1) == a && substr(b, 1, dlen) in antprefix) return 1
+			  return 0}		     
+$1 == "#" {header = header " " $NF}; 
+$1 == "sim" {print header " word1 word2 gold VAD.dist ant.morph"};
+
+       while(getline < "../MoE-ASD-main/dataset/adjective-pairs.test" > 0) gold[$1,$2]=$3}; 
+    {word1 = $(NF-1); word2 = $NF}
+word1 SUBSEP word2 in gold {print $1, word1, word2, gold[word1, word2], dist(word1, word2), antmorph(word1,word2)}' cos_and_edit5/adjective-pairs.test |

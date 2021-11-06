@@ -1,0 +1,50 @@
+[32m[2021-11-06 13:30:54,878] [    INFO][0m - Already cached /mnt/home/kwc/.paddlenlp/models/ernie-2.0-en/vocab.txt[0m
+[32m[2021-11-06 13:30:54,956] [    INFO][0m - Already cached /mnt/home/kwc/.paddlenlp/models/ernie-2.0-en/ernie_v2_eng_base.pdparams[0m
+W1106 13:30:54.958217 2152204 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 5.2, Driver API Version: 11.2, Runtime API Version: 10.2
+W1106 13:30:54.961843 2152204 device_context.cc:465] device: 0, cuDNN Version: 8.0.
+len(train_ds): 64
+len(dev_ds): 64
+len(test_ds): 64
+global step 200, epoch: 1, batch: 200, loss: 0.547978, speed: 12.62 step/s
+global step 400, epoch: 1, batch: 400, loss: 0.677763, speed: 12.89 step/s
+global step 600, epoch: 2, batch: 136, loss: 0.409274, speed: 12.99 step/s
+global step 800, epoch: 2, batch: 336, loss: 0.427486, speed: 12.94 step/s
+calling evaluate on dev set
+calling evaluate
+accu: 0.896985
+in evaluate, calling train
+Saving checkpoint to: ./tmp/dureader-yesno/model_928
+in predict, calling eval
+in predict, returned from eval
+pt 0
+Traceback (most recent call last):
+  File "run_syn_ant.py", line 267, in <module>
+    do_train(args)
+  File "run_syn_ant.py", line 258, in do_train
+    predictions = predict(model, test_data_loader)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 331, in _decorate_function
+    return func(*args, **kwargs)
+  File "run_syn_ant.py", line 88, in predict
+    for batch in data_loader:
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 255, in __next__
+    data = self._reader.read_next_var_list()
+SystemError: (Fatal) Blocking queue is killed because the data reader raises an exception.
+  [Hint: Expected killed_ != true, but received killed_:1 == true:1.] (at /paddle/paddle/fluid/operators/reader/blocking_queue.h:166)
+
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/tools/python/python3.7.9/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/tools/python/python3.7.9/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 248, in _thread_loop
+    six.reraise(*sys.exc_info())
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/six.py", line 719, in reraise
+    raise value
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py", line 234, in _thread_loop
+    tmp.set(slot, core.CPUPlace())
+ValueError: (InvalidArgument) Input object type error or incompatible array data type. tensor.set() supports array with bool, float16, float32, float64, int8, int16, int32, int64, uint8 or uint16, please check your input or input array data type. (at /paddle/paddle/fluid/pybind/tensor_py.h:411)
+
+

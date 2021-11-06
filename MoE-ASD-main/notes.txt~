@@ -1,0 +1,247 @@
+
+cd ~kwc/morphology/MoE-ASD-main/model
+python train_model.py --pos 'adj' --expert_size 256 --embed_size 300 --projection_size 4
+python train.py --pos 'adj' --expert_size 256 --embed_size 300 --projection_size 4 --model_file './model_adj.pkl'
+python eval.py --pos 'adj' --expert_size 256 --embed_size 300 --projection_size 4 --model_file './model_adj.pkl'
+
+cd ~kwc/morphology/MoE-ASD-main/model
+for pos in noun verb adj
+do
+echo POS: $pos
+python eval.py --input /mnt/home/kwc/morphology/synonym_dictionary/dicts/fallows.test --expert_size 256 --embed_size 300 --projection_size 4 --model_file model_$pos.pkl
+done
+
+[0.6092188321935823, 0.6786339754816112, 0.22932386447699363, 0.3428065907331638]
+
+cd ~kwc/morphology/MoE-ASD-main/model
+for pos in fallows-small fallows noun verb adj
+do
+cd ~kwc/morphology/MoE-ASD-main/model
+python train.py --pos $pos --expert_size 256 --embed_size 300 --projection_size 4 --model_file model_$pos.pkl
+done
+
+cd ~kwc/morphology/MoE-ASD-main/model
+mkdir -p ../slurm
+for pos  in fallows-small fallows noun verb adj
+do
+queues=TitanXx8_short,TitanXx8
+sbatch --gres=gpu:1 -p $queues -o ../slurm/$pos.out -e ../slurm/$pos.err train.py --pos $pos --expert_size 256 --embed_size 300 --projection_size 4 --model_file model_$pos.pkl
+done
+
+cd ~kwc/morphology/MoE-ASD-main/model
+mkdir -p ../slurm
+for pos  in fallows adj
+do
+for piece in 1 2 3 4 5 6 7 8 9
+do
+queues=TitanXx8_short,TitanXx8
+pospiece=$pos.p$piece
+sbatch --gres=gpu:1 -p $queues -o ../slurm/$pospiece.out -e ../slurm/$pospiece.err train.py --pos $pos --expert_size 256 --embed_size 300 --projection_size 4 --model_file model_$pospiece.pkl --piece $i
+done
+done
+
+
+
+
+for pos1 in fallows fallows-small noun verb adj
+do
+for pos2 in fallows fallows-small noun verb adj 
+do
+cd ~kwc/morphology/MoE-ASD-main/model
+echo POS: $pos1 $pos2
+python eval.py --input ~kwc/morphology/MoE-ASD-main/dataset_tag/tag-"$pos1"-pairs.test --expert_size 256 --embed_size 300 --projection_size 4 --model_file model_$pos2.pkl
+done
+done > ~kwc/morphology/MoE-ASD-main/results4.txt
+
+cd ~kwc/morphology/MoE-ASD-main/model
+for model in `pwd`/../*p[0-9]*pkl
+do
+for testset in `pwd`/../dataset_tag/*p[0-9]*.test
+do
+echo model: `basename $model` testset: `basename $testset`
+python eval.py --input $testset --expert_size 256 --embed_size 300 --projection_size 4 --model_file $model
+done
+done > ~kwc/morphology/MoE-ASD-main/results.pieces1.txt
+
+egrep -v tag-adjective-p0-pairs.test results.pieces1.txt | 
+egrep '^model|^\[' | 
+awk '$1 == "model:" {model = $2; testset=$4; getline; print substr($1,2), model, testset} ' | 
+tr -d , |  sort -nr > /tmp/x
+
+awk 'NR == 1 {print "score\tmodel\tmodel.piece\ttestset\ttestset.piece"};
+{split($2, model, /[^a-zA-Z0-9]/); 
+split($3, testset, /[^a-zA-Z0-9]/); 
+print $1, model[2], substr(model[3],2), testset[2], substr(testset[3],2)}' /tmp/x  > ~kwc/morphology/MoE-ASD-main/results.pieces1.clean
+
+# egrep 'POS:|^\[' ~kwc/morphology/MoE-ASD-main/results.txt | awk '{x=$0; getline; print $1, x}' | tr -d '[' | sort -nr
+# 0.9063876651982379, POS: verb verb
+# 0.892245720040282, POS: adj adj
+# 0.8705882352941177, POS: noun noun
+# 0.7371601208459214, POS: adj fallows-small
+# 0.7136563876651982, POS: verb noun
+# 0.6817180616740088, POS: verb fallows-small
+# 0.6676470588235294, POS: noun verb
+# 0.6560926485397784, POS: adj verb
+# 0.6509803921568628, POS: noun adj
+# 0.614765100671141, POS: fallows-small adj
+# 0.6027190332326284, POS: adj noun
+# 0.5914096916299559, POS: verb adj
+# 0.5911764705882353, POS: noun fallows-small
+# 0.587248322147651, POS: fallows-small fallows-small
+# 0.5838926174496645, POS: fallows-small verb
+# 0.5765100671140939, POS: fallows-small noun
+
+# POS: noun noun
+# [0.8705882352941177, 0.8487084870848709, 0.9019607843137255, 0.8745247148288975]
+
+# POS: noun verb
+# [0.6676470588235294, 0.8577405857740585, 0.4019607843137255, 0.5473965287049398]
+
+# POS: noun adj
+# [0.6509803921568628, 0.6590909090909091, 0.6254901960784314, 0.6418511066398389]
+
+# POS: verb noun
+# [0.7136563876651982, 0.7803468208092486, 0.5947136563876652, 0.675]
+
+# POS: verb verb
+# [0.9063876651982379, 0.8984881209503239, 0.9162995594713657, 0.9073064340239912]
+
+# POS: verb adj
+# [0.5914096916299559, 0.6094986807387863, 0.5088105726872246, 0.5546218487394958]
+
+# POS: adj noun
+# [0.6027190332326284, 0.5651340996168582, 0.8912386706948641, 0.6916764361078547]
+
+# POS: adj verb
+# [0.6560926485397784, 0.7384615384615385, 0.48338368580060426, 0.5842970176506391]
+
+# POS: adj adj
+# [0.892245720040282, 0.896236012207528, 0.8872104733131924, 0.8917004048582996]
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag
+for f in tag-fallows-pairs.*
+do
+awk 'rand() < 0.1' $f > `echo $f | sed 's/fallows/fallows-small/'`
+done
+
+egrep 'POS:|^\[' ~kwc/morphology/MoE-ASD-main/results4.txt | awk '{x=$0; getline; print $1, x}' | tr -d '[' | sort -nr
+0.8986784140969163, POS: verb verb
+0.8862034239677744, POS: adj adj
+0.8627450980392157, POS: noun noun
+0.8204845814977973, POS: verb fallows
+0.8202416918429003, POS: adj fallows
+0.7312775330396476, POS: verb fallows-small
+0.7265861027190332, POS: adj fallows-small
+0.7058823529411765, POS: noun fallows
+0.6852941176470588, POS: noun verb
+0.6729074889867841, POS: verb noun
+0.6631821884333424, POS: fallows fallows
+0.6617647058823529, POS: noun adj
+0.6602316602316602, POS: fallows-small fallows
+0.6515609264853978, POS: adj verb
+0.638235294117647, POS: noun fallows-small
+0.6293436293436293, POS: fallows-small adj
+0.6212326907412435, POS: fallows adj
+0.5976837865055388, POS: adj noun
+0.5954385012218301, POS: fallows fallows-small
+0.5855855855855856, POS: fallows-small fallows-small
+0.5803964757709251, POS: verb adj
+0.574002574002574, POS: fallows-small noun
+0.5662503393972306, POS: fallows noun
+0.5564756991582949, POS: fallows verb
+0.5366795366795367, POS: fallows-small verb
+
+
+egrep 'POS:|^\[' ~kwc/morphology/MoE-ASD-main/results4.txt | awk '{x=$0; getline; print $1, x}' | tr -d '[,'  | awk '{printf "%0.3f %s %s\n", $1, $(NF-1), $NF}'
+0.663 fallows fallows
+0.595 fallows fallows-small
+0.566 fallows noun
+0.556 fallows verb
+0.621 fallows adj
+0.660 fallows-small fallows
+0.586 fallows-small fallows-small
+0.574 fallows-small noun
+0.537 fallows-small verb
+0.629 fallows-small adj
+0.706 noun fallows
+0.638 noun fallows-small
+0.863 noun noun
+0.685 noun verb
+0.662 noun adj
+0.820 verb fallows
+0.731 verb fallows-small
+0.673 verb noun
+0.899 verb verb
+0.580 verb adj
+0.820 adj fallows
+0.727 adj fallows-small
+0.598 adj noun
+0.652 adj verb
+0.886 adj adj
+
+
+		TestSet
+TrainSet	adj	fallows	fallows-small	noun	verb
+adj		0.886	0.621	0.629	0.662	0.58
+fallows		0.82	0.663	0.66	0.706	0.82
+fallows-small	0.727	0.595	0.586	0.638	0.731
+noun		0.598	0.566	0.574	0.863	0.673
+verb		0.652	0.556	0.537	0.685	0.899
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag
+mkdir -p ../dataset_csv
+for f in *.train *.test *.val
+do
+awk 'BEGIN {FS="\t"; OFS=","; print "id", "word1", "word2", "antmorph", "gold"}
+{print FILENAME NR, $1,$2,$3,$4}' $f > ../dataset_csv/$f.csv
+done
+
+from datasets import load_dataset
+dir='/mnt/home/kwc/morphology/MoE-ASD-main/dataset_csv/'
+f='tag-adjective-pairs'
+df = {}
+for split in ['train', 'val', 'test']:
+    df[split] = dir + f + '.' + split + '.csv'
+
+dataset = load_dataset('csv', data_files=df)
+
+import paddlenlp
+import paddlenlp.datasets.dataset
+dir='/mnt/home/kwc/morphology/MoE-ASD-main/dataset_csv/'
+f='tag-adjective-pairs'
+df = {}
+for split in ['train', 'val', 'test']:
+    df[split] = dir + f + '.' + split + '.csv'
+
+dataset = paddlenlp.datasets.dataset.load_dataset('csv', data_files=df)
+
+mkdir /mnt/home/kwc/morphology/MoE-ASD-main/dataset_json
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset_csv
+python ../csv_to_json.py *.csv
+mv *.json ../dataset_json
+
+
+import pdb
+def read_row(data_path):
+    with open(data_path, 'r', encoding='utf-8') as f:
+        next(f)
+        for line in f:
+	    print(line)
+	    pdb.set_trace()
+            word1,word2,antmorph,gold = line.strip('\n').split(',')
+            yield {'word1': word1, 'word2': word2, 'antmorph': antmorph, 'gold':gold}
+
+import paddlenlp
+import paddlenlp.datasets.dataset
+dir='/mnt/home/kwc/morphology/MoE-ASD-main/dataset_csv/'
+f='tag-adjective-pairs'
+dataset = paddlenlp.datasets.dataset.load_dataset(read_row, splits=['train'], data_files=[dir+ f + '.train.csv'], lazy=False)
+
+
+import paddlenlp
+import paddlenlp.datasets.dataset
+train_ds, dev_ds, test_ds = paddlenlp.datasets.dataset.load_dataset('dureader_yesno', splits=['train', 'dev', 'test'])
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/DuReader-yesno_for_syn_ant
+mkdir slurm
+sbatch --gres=gpu:1 -p TitanXx8 -o slurm/syn_ant.out -e slurm/syn_ant.err run_syn_ant.sh

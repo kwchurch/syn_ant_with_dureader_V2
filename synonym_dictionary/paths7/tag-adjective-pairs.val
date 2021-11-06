@@ -1,0 +1,399 @@
+word1	word2	antonym.edges	edges	labels	words
+innocent	harmless	0	0	2	2	1|1	harmless|harmful|innocent
+noble	ignoble	0	1	1	1	1	ignoble|noble
+good	awful	0	1	1	1	1	awful|good
+easy	heavy	0	1	1	2	0|1	heavy|hard|easy
+stupid	smart	0	1	1	1	1	smart|stupid
+greedy	avaricious	0	0	0	1	0	avaricious|greedy
+indirect	immediate	0	1	1	2	0|1	immediate|primary|indirect
+trivial	ordinary	0	0	0	3	0|0|0	ordinary|customary|common|trivial
+affective	emotional	0	0	None
+torpid	dull	0	0	None
+linear	digital	0	1	1	1	1	digital|linear
+saline	salty	0	0	2	2	1|1	salty|fresh|saline
+perfect	certain	0	0	2	4	0|1|0|1	certain|positive|informal|irregular|perfect
+actual	substantial	0	0	0	1	0	substantial|actual
+simplistic	complex	0	1	None
+indigenous	aboriginal	0	0	0	1	0	aboriginal|indigenous
+unremarkable	routine	0	0	2	4	0|1|1|0	routine|everyday|extraordinary|ordinary|unremarkable
+usual	unusual	1	1	1	1	1	unusual|usual
+transparent	crystalline	0	0	2	5	0|0|1|0|1	crystalline|pure|virtuous|vicious|corrupt|transparent
+stately	dignified	0	0	0	4	0|0|0|0	dignified|noble|heroic|grand|stately
+beautiful	great	0	0	1	3	0|1|0	great|thick|fine|beautiful
+unlawful	unconstitutional	0	0	2	3	1|0|1	unconstitutional|constitutional|lawful|unlawful
+graphic	vivid	0	0	0	1	0	vivid|graphic
+rectangular	rounded	0	1	None
+vast	cosmic	0	0	0	1	0	cosmic|vast
+thin	fragile	0	0	2	2	1|1	fragile|important|thin
+waterlogged	dry	0	1	1	2	1|0	dry|swampy|waterlogged
+extensive	widespread	0	0	2	3	1|1|0	widespread|specific|broad|extensive
+hot	cool	0	1	1	2	0|1	cool|cold|hot
+academic	applied	0	1	1	5	1|0|0|0|0	applied|pure|essential|formal|scholastic|academic
+transparent	open	0	0	2	4	1|0|0|1	open|closed|close|thick|transparent
+incompatible	inconsistent	0	0	2	2	1|1	inconsistent|consistent|incompatible
+disparate	same	0	1	None
+separate	integrated	0	1	3	3	1|1|1	integrated|discrete|joint|separate
+radical	old	0	1	0	2	0|0	old|original|radical
+double	little	0	1	3	3	1|1|1	little|deep|small|double
+authoritarian	autocratic	0	0	0	1	0	autocratic|authoritarian
+fierce	furious	0	0	0	4	0|0|0|0	furious|violent|severe|rough|fierce
+foolish	silly	0	0	2	4	0|1|0|1	silly|stupid|smart|wise|foolish
+homozygous	heterozygous	0	1	1	1	1	heterozygous|homozygous
+distinguishable	distinct	0	0	2	3	0|1|1	distinct|different|indistinguishable|distinguishable
+intrinsic	extrinsic	0	1	None
+clever	adroit	0	0	0	1	0	adroit|clever
+sweet	perfumed	0	0	None
+diachronic	synchronic	0	1	1	1	1	synchronic|diachronic
+incompressible	compressible	1	1	1	1	1	compressible|incompressible
+nonresidential	residential	1	1	None
+conspicuous	famous	0	0	0	2	0|0	famous|notable|conspicuous
+provincial	cosmopolitan	0	1	1	1	1	cosmopolitan|provincial
+dreary	dark	0	0	None
+adoptive	biological	0	1	1	1	1	biological|adoptive
+foolhardy	reckless	0	0	0	1	0	reckless|foolhardy
+aged	fresh	0	1	1	2	1|0	fresh|old|aged
+sure	false	0	1	1	3	1|0|0	false|true|reliable|sure
+invisible	visible	1	1	1	2	0|1	visible|visual|invisible
+poor	unfortunate	0	0	0	5	0|0|0|0|0	unfortunate|unlucky|unhappy|sorry|mean|poor
+apparent	plain	0	0	0	2	0|0	plain|open|apparent
+live	dead	0	1	1	2	0|1	dead|deceased|live
+tangy	sweet	0	1	1	2	1|0	sweet|tart|tangy
+prefrontal	posterior	0	1	None
+dumb	slow	0	0	0	4	0|0|0|0	slow|moderate|low|vulgar|dumb
+plain	decorative	0	1	1	3	0|0|1	decorative|ornamental|fancy|plain
+leaded	unleaded	1	1	1	1	1	unleaded|leaded
+warm	cold	0	1	1	1	1	cold|warm
+harsh	severe	0	0	0	2	0|0	severe|rough|harsh
+narrow	strait	0	0	None
+special	extraordinary	0	0	0	3	0|0|0	extraordinary|singular|peculiar|special
+plebeian	patrician	0	1	None
+stationary	stable	0	0	None
+common	familiar	0	0	0	1	0	familiar|common
+unimportant	insignificant	0	0	2	2	1|1	insignificant|significant|unimportant
+stupid	clever	0	1	1	2	1|0	clever|dull|stupid
+close	harsh	0	1	1	3	1|0|0	harsh|light|short|close
+bottom	top	0	1	1	1	1	top|bottom
+makeshift	permanent	0	1	None
+terrific	terrible	0	0	2	3	1|1|0	terrible|ordinary|fantastic|terrific
+large	minuscule	0	1	1	1	1	minuscule|large
+commonplace	everyday	0	0	2	3	1|1|0	everyday|strange|common|commonplace
+dedicated	devoted	0	0	2	6	0|0|0|1|1|0	devoted|constant|uniform|regular|secular|sacred|dedicated
+inward	outward	0	1	None
+reasonable	just	0	0	0	5	0|0|0|0|0	just|fair|handsome|convenient|suitable|reasonable
+actual	imaginary	0	1	1	1	1	imaginary|actual
+stout	robust	0	0	0	5	0|0|0|0|0	robust|sound|heavy|big|bulky|stout
+sturdy	hardy	0	0	0	3	0|0|0	hardy|strong|firm|sturdy
+descriptive	normative	0	1	1	1	1	normative|descriptive
+real	royal	0	0	0	7	0|0|0|0|0|0|0	royal|princely|grand|stately|formal|conventional|positive|real
+legitimate	invalid	0	1	0	5	0|0|0|0|0	invalid|weak|low|simple|natural|legitimate
+atonal	tonal	1	1	1	1	1	tonal|atonal
+chaste	virtuous	0	0	None
+offensive	aggressive	0	0	2	4	1|1|0|0	aggressive|passive|violent|rude|offensive
+satisfied	content	0	0	None
+human	animal	0	1	None
+red	reddish	0	0	0	2	0|0	reddish|crimson|red
+much	little	0	1	1	3	1|0|0	little|large|considerable|much
+flawless	flawed	0	1	None
+reduced	subject	0	0	2	3	0|1|1	subject|inferior|high|reduced
+comprehensible	incomprehensible	1	1	1	1	1	incomprehensible|comprehensible
+biennial	annual	0	1	1	1	1	annual|biennial
+luminous	bright	0	0	0	1	0	bright|luminous
+hypnotic	narcotic	0	0	None
+marine	terrestrial	0	1	2	2	1|1	terrestrial|amphibious|marine
+unreasonable	reasonable	1	1	1	1	1	reasonable|unreasonable
+amusing	light	0	0	2	2	1|1	light|serious|amusing
+poignant	painful	0	0	None
+square	solid	0	0	0	5	0|0|0|0|0	solid|valid|strong|violent|sharp|square
+heavenly	earthly	0	1	None
+unskillful	skillful	1	1	1	1	1	skillful|unskillful
+sloping	vertical	0	1	3	5	1|1|0|0|1	vertical|flat|sharp|abrupt|steep|sloping
+fantastic	terrific	0	0	0	1	0	terrific|fantastic
+sentimental	emotional	0	0	1	6	0|0|0|0|0|1	emotional|excited|enthusiastic|ardent|strong|tough|sentimental
+red	neutral	0	1	1	3	1|0|0	neutral|reddish|crimson|red
+ovate	elliptical	0	0	2	3	1|1|0	elliptical|angular|oval|ovate
+true	accurate	0	0	0	2	0|0	accurate|exact|true
+round	square	0	1	1	1	1	square|round
+mythical	real	0	1	1	2	1|0	real|fictitious|mythical
+confident	timid	0	1	1	6	1|0|0|0|0|0	timid|brave|virtuous|pure|real|positive|confident
+romantic	fantastic	0	0	3	6	1|0|1|0|1|0	fantastic|familiar|fresh|bad|tough|sentimental|romantic
+less	more	0	1	1	1	1	more|less
+storied	famous	0	0	None
+pleased	displeased	1	1	1	2	0|1	displeased|angry|pleased
+hearty	healthy	0	0	None
+evil	corrupt	0	0	2	3	1|0|1	corrupt|innocent|white|evil
+salty	saline	0	0	2	2	1|1	saline|fresh|salty
+first	earliest	0	0	None
+pulpy	soft	0	0	None
+gory	bloody	0	0	0	1	0	bloody|gory
+bitter	painful	0	0	0	3	0|0|0	painful|sharp|sour|bitter
+funny	familiar	0	1	1	3	1|0|0	familiar|fantastic|grotesque|funny
+complex	difficult	0	0	1	5	0|0|0|0|1	difficult|obscure|humble|low|simple|complex
+discontinuous	continuous	1	1	1	1	1	continuous|discontinuous
+exogenous	endogenous	0	1	None
+illusionary	real	0	1	None
+amorous	romantic	0	0	None
+transparent	opaque	0	1	1	1	1	opaque|transparent
+unreliable	uncertain	0	0	2	2	1|1	uncertain|reliable|unreliable
+progressive	advanced	0	0	3	6	1|0|0|0|1|1	advanced|low|coarse|broad|liberal|conservative|progressive
+analogous	like	0	0	2	2	1|1	like|opposite|analogous
+right	ripe	0	0	1	6	1|0|0|0|0|0	ripe|green|raw|natural|legitimate|lawful|right
+separate	adjacent	0	1	1	7	0|0|1|0|0|0|0	adjacent|near|immediate|slow|strange|peculiar|individual|separate
+singular	plural	0	1	1	1	1	plural|singular
+female	male	0	1	1	2	1|0	male|feminine|female
+next	immediate	0	0	0	1	0	immediate|next
+sharp	steep	0	0	0	2	0|0	steep|abrupt|sharp
+social	antisocial	1	1	1	1	1	antisocial|social
+stormy	calm	0	1	None
+rich	plain	0	1	0	4	0|0|0|0	plain|broad|large|plentiful|rich
+occasional	regular	0	1	1	2	1|0	regular|casual|occasional
+furious	enraged	0	0	None
+monophonic	polyphonic	0	1	1	1	1	polyphonic|monophonic
+collective	distributive	0	1	None
+gross	nett	0	1	1	1	1	nett|gross
+turgid	bombastic	0	0	None
+absolute	pure	0	0	0	3	0|0|0	pure|real|positive|absolute
+lovely	enchanting	0	0	None
+noncancerous	cancerous	1	1	1	1	1	cancerous|noncancerous
+indefinite	infinite	0	0	0	5	0|0|0|0|0	infinite|great|powerful|prevalent|general|indefinite
+light	gay	0	0	0	4	0|0|0|0	gay|lively|quick|nimble|light
+extraneous	intrinsic	0	1	None
+childish	mature	0	1	1	1	1	mature|childish
+mad	angry	0	0	1	7	0|0|0|0|0|0|1	angry|high|strong|energetic|vigorous|healthy|sane|mad
+aged	green	0	1	1	3	0|1|0	green|recent|old|aged
+logical	invalid	0	1	1	4	1|0|0|0	invalid|valid|strong|sound|logical
+rude	unrefined	0	0	2	3	1|1|0	unrefined|refined|crude|rude
+ready	convenient	0	0	0	2	0|0	convenient|suitable|ready
+muscular	powerful	0	0	0	3	0|0|0	powerful|vigorous|robust|muscular
+fine	coarse	0	1	1	1	1	coarse|fine
+divine	godly	0	0	None
+radical	moderate	0	1	1	2	1|0	moderate|extremist|radical
+fortunate	unfortunate	1	1	1	2	1|0	unfortunate|happy|fortunate
+pickled	fresh	0	1	None
+secondary	subordinate	0	0	2	2	1|1	subordinate|dominant|secondary
+opposite	same	0	1	1	2	1|0	same|other|opposite
+spiritual	pneumatic	0	0	None
+light	moderate	0	0	0	2	0|0	moderate|low|light
+magnetic	nonmagnetic	1	1	None
+independent	absolute	0	0	2	4	1|0|0|1	absolute|conditional|subject|dependent|independent
+mechanical	chemical	0	1	5	7	0|1|1|1|0|1|1	chemical|analytical|synthetic|natural|artificial|conventional|atomic|mechanical
+weak	strong	0	1	1	1	1	strong|weak
+envious	jealous	0	0	2	8	0|0|1|0|1|0|0|0	jealous|suspicious|insecure|secure|safe|dangerous|wicked|malicious|envious
+fake	genuine	0	1	1	2	1|0	genuine|false|fake
+latent	actual	0	1	1	2	0|1	actual|active|latent
+inauspicious	auspicious	1	1	1	1	1	auspicious|inauspicious
+dependable	safe	0	0	0	2	0|0	safe|good|dependable
+unlikely	likely	1	1	3	3	1|1|1	likely|improbable|probable|unlikely
+only	solitary	0	0	0	1	0	solitary|only
+affable	warm	0	0	0	5	0|0|0|0|0	warm|tender|compassionate|merciful|gracious|affable
+strict	close	0	0	0	3	0|0|0	close|closed|tight|strict
+underground	open	0	1	1	2	1|0	open|subterranean|underground
+unimportant	great	0	1	1	1	1	great|unimportant
+sluggish	slow	0	0	0	2	0|0	slow|lazy|sluggish
+nice	delicate	0	0	0	2	0|0	delicate|dangerous|nice
+incomparable	comparable	1	1	1	1	1	comparable|incomparable
+contented	satisfied	0	0	0	4	0|0|0|0	satisfied|pleased|glad|happy|contented
+foggy	thick	0	0	2	2	1|1	thick|clear|foggy
+diploid	polyploid	0	1	1	1	1	polyploid|diploid
+lawful	right	0	0	0	1	0	right|lawful
+delicate	lovely	0	0	0	3	0|0|0	lovely|beautiful|graceful|delicate
+short	long	0	1	1	2	1|0	long|little|short
+lost	confused	0	0	None
+disjunct	conjunct	0	1	None
+specific	precise	0	0	0	2	0|0	precise|definite|specific
+ecumenical	sectarian	0	1	None
+stark	powerful	0	0	0	4	0|0|0|0	powerful|valid|strong|violent|stark
+round	full	0	0	0	3	0|0|0	full|rounded|circular|round
+unable	able	1	1	1	2	0|1	able|potent|unable
+extracellular	intracellular	0	1	None
+unoccupied	occupied	1	1	1	1	1	occupied|unoccupied
+centrifugal	centripetal	0	1	1	1	1	centripetal|centrifugal
+open	evident	0	0	0	2	0|0	evident|obvious|open
+expensive	inexpensive	1	1	1	1	1	inexpensive|expensive
+authentic	credible	0	0	2	5	0|1|1|0|0	credible|likely|last|original|genuine|authentic
+pretty	good	0	1	0	3	0|0|0	good|skillful|fine|pretty
+clear	keen	0	0	0	5	0|0|0|0|0	keen|ardent|passionate|intense|acute|clear
+authoritarian	despotic	0	0	0	1	0	despotic|authoritarian
+bald	haired	0	1	1	2	0|1	haired|hairy|bald
+crazy	mad	0	0	2	2	1|1	mad|sane|crazy
+equivocal	univocal	0	1	1	1	1	univocal|equivocal
+early	middle	0	1	1	1	1	middle|early
+fresh	dirty	0	1	0	4	0|0|0|0	dirty|gritty|sharp|smart|fresh
+dramatic	lyric	0	1	1	1	1	lyric|dramatic
+anomalous	normal	0	1	None
+head	chief	0	0	0	3	0|0|0	chief|first|top|head
+pilose	hairy	0	0	None
+arrogant	presumptuous	0	0	0	1	0	presumptuous|arrogant
+natural	artificial	0	1	1	1	1	artificial|natural
+open	private	0	1	1	3	1|0|0	private|public|overt|open
+direct	express	0	0	1	6	0|0|0|0|1|0	express|explicit|plain|normal|formal|intimate|direct
+similar	unlike	0	1	1	1	1	unlike|similar
+soft	loud	0	1	1	1	1	loud|soft
+lackadaisical	lazy	0	0	None
+glabrous	haired	0	1	None
+triclinic	monoclinic	0	1	None
+ineffective	strong	0	1	1	2	1|0	strong|unable|ineffective
+transitory	ephemeral	0	0	2	2	1|1	ephemeral|permanent|transitory
+systemic	topical	0	1	1	1	1	topical|systemic
+refined	tasteful	0	0	0	2	0|0	tasteful|elegant|refined
+loose	fine	0	1	2	3	1|0|1	fine|thick|fast|loose
+dumb	ridiculous	0	0	0	3	0|0|0	ridiculous|idiotic|stupid|dumb
+correct	improper	0	1	1	2	0|1	improper|incorrect|correct
+hefty	strong	0	0	None
+awake	unconscious	0	1	1	1	1	unconscious|awake
+distant	near	0	1	1	2	0|1	near|immediate|distant
+shrewd	sharp	0	0	0	4	0|0|0|0	sharp|clever|skillful|subtle|shrewd
+native	aboriginal	0	0	0	2	0|0	aboriginal|natural|native
+prostrate	erect	0	1	None
+slow	inactive	0	0	2	2	1|1	inactive|hot|slow
+intimate	remote	0	1	1	2	1|0	remote|close|intimate
+provocative	exciting	0	0	None
+subtle	refined	0	0	0	4	0|0|0|0	refined|elegant|beautiful|fine|subtle
+depressed	high	0	1	1	2	1|0	high|low|depressed
+overall	net	0	1	3	3	1|1|1	net|gross|specific|overall
+unsure	confident	0	1	1	1	1	confident|unsure
+weird	familiar	0	1	1	5	1|0|0|0|0	familiar|distant|foreign|barbarian|wild|weird
+eerie	spooky	0	0	None
+refined	graceful	0	0	0	1	0	graceful|refined
+ruddy	red	0	0	None
+firm	soft	0	1	1	2	1|0	soft|hard|firm
+good	benevolent	0	0	0	3	0|0|0	benevolent|kind|nice|good
+basic	acidic	0	1	1	1	1	acidic|basic
+awkward	inept	0	0	0	3	0|0|0	inept|stupid|dull|awkward
+naked	clothed	0	1	None
+likable	sympathetic	0	0	None
+ample	large	0	0	0	3	0|0|0	large|plentiful|rich|ample
+sensual	mental	0	1	None
+metaphysical	empirical	0	1	None
+symmetrical	asymmetrical	1	1	3	3	1|1|1	asymmetrical|bilateral|asymmetric|symmetrical
+numerical	verbal	0	1	1	2	1|0	verbal|mathematical|numerical
+maximum	maximal	0	0	2	2	1|1	maximal|minimal|maximum
+cutaneous	dermal	0	0	None
+young	undeveloped	0	0	3	7	0|1|1|1|0|0|0	undeveloped|backward|progressive|conservative|radical|original|new|young
+unintentional	unplanned	0	0	0	1	0	unplanned|unintentional
+strict	permissive	0	1	None
+secret	underground	0	0	0	2	0|0	underground|hidden|secret
+sad	satisfied	0	0	1	3	0|0|1	satisfied|pleased|glad|sad
+systematic	taxonomic	0	0	None
+unidirectional	bidirectional	0	1	None
+unseeded	seeded	1	1	None
+distressing	good	0	1	None
+western	eastern	0	1	1	2	1|0	eastern|west|western
+free	destitute	0	0	0	1	0	destitute|free
+light	faint	0	0	0	3	0|0|0	faint|weak|low|light
+familiar	remote	0	1	1	2	1|0	remote|accessible|familiar
+playful	serious	0	1	1	1	1	serious|playful
+monumental	monolithic	0	0	None
+eminent	high	0	0	0	4	0|0|0|0	high|honorable|noble|renowned|eminent
+northerly	southerly	0	1	1	3	0|1|0	southerly|southern|northern|northerly
+polyunsaturated	saturated	0	1	None
+inhomogeneous	homogeneous	1	1	None
+frivolous	serious	0	1	1	2	1|0	serious|light|frivolous
+relevant	pertinent	0	0	0	6	0|0|0|0|0|0	pertinent|suitable|ready|willing|pregnant|significant|relevant
+strict	lenient	0	1	1	1	1	lenient|strict
+magnificent	majestic	0	0	0	5	0|0|0|0|0	majestic|imperial|royal|princely|grand|magnificent
+integral	perfect	0	0	1	6	1|0|0|0|0|0	perfect|irregular|abnormal|unusual|peculiar|individual|integral
+cheerful	sad	0	1	1	3	0|0|1	sad|moody|dark|cheerful
+successful	unsuccessful	1	1	1	1	1	unsuccessful|successful
+direct	relative	0	1	1	6	1|0|0|0|0|0	relative|infinite|great|thick|close|intimate|direct
+desperate	hopeful	0	1	1	1	1	hopeful|desperate
+subacid	sweet	0	1	None
+plump	thin	0	1	1	2	1|0	thin|round|plump
+general	vague	0	0	0	3	0|0|0	vague|uncertain|indefinite|general
+terrestrial	epiphytic	0	1	None
+static	dynamic	0	1	1	3	0|0|1	dynamic|active|kinetic|static
+easy	poor	0	1	1	2	1|0	poor|prosperous|easy
+small	superior	0	1	1	2	0|1	superior|great|small
+yellow	healthy	0	1	3	4	1|0|1|1	healthy|mental|subjective|neutral|yellow
+muscular	strong	0	0	0	2	0|0	strong|brawny|muscular
+messy	chaotic	0	0	5	7	1|1|1|1|0|0|1	chaotic|organized|confused|clear|thick|great|neat|messy
+new	unusual	0	0	0	4	0|0|0|0	unusual|novel|modern|recent|new
+physical	mental	0	1	1	1	1	mental|physical
+intramural	extramural	0	1	None
+necessary	involuntary	0	0	1	9	1|0|0|0|0|0|0|0|0	involuntary|voluntary|willing|pregnant|open|honest|true|pure|essential|necessary
+vague	shadowy	0	0	None
+large	prominent	0	0	0	3	0|0|0	prominent|outstanding|great|large
+predicative	attributive	0	1	None
+hard	easy	0	1	1	1	1	easy|hard
+economic	unprofitable	0	1	3	6	1|0|0|1|0|1	unprofitable|profitable|beneficial|good|incompetent|inefficient|economic
+absolute	relative	0	1	1	1	1	relative|absolute
+advantageous	disadvantageous	1	1	1	3	1|0|0	disadvantageous|beneficial|good|advantageous
+rational	sound	0	0	2	3	0|1|1	sound|logical|irrational|rational
+new	ancient	0	1	1	1	1	ancient|new
+magnetic	attractive	0	0	3	7	0|0|1|1|1|0|0	attractive|handsome|big|atomic|mechanical|electrical|electric|magnetic
+active	quick	0	0	0	1	0	quick|active
+overground	underground	0	1	None
+antique	ancient	0	0	0	3	0|0|0	ancient|obsolete|old|antique
+available	convenient	0	0	0	4	0|0|0|0	convenient|suitable|good|advantageous|available
+national	private	0	1	1	4	0|0|1|0	private|solitary|individual|general|national
+ugly	unpleasant	0	0	2	3	1|0|1	unpleasant|pleasant|fair|ugly
+coated	uncoated	1	1	1	1	1	uncoated|coated
+ethical	wrong	0	1	1	5	0|0|1|0|0	wrong|mistaken|false|honest|trustworthy|ethical
+familiar	conversant	0	0	None
+imperial	sovereign	0	0	0	2	0|0	sovereign|supreme|imperial
+rich	lean	0	1	1	1	1	lean|rich
+harsh	disagreeable	0	0	2	3	1|0|1	disagreeable|agreeable|pleasant|harsh
+barbarous	brutal	0	0	0	1	0	brutal|barbarous
+ethereal	real	0	1	None
+faulty	incorrect	0	0	0	2	0|0	incorrect|wrong|faulty
+afferent	efferent	0	1	1	1	1	efferent|afferent
+square	circular	0	1	1	2	0|1	circular|round|square
+radical	extreme	0	0	1	3	0|1|0	extreme|last|original|radical
+liable	responsible	0	0	None
+gregarious	outgoing	0	0	None
+numerous	musical	0	0	None
+recurrent	persistent	0	0	2	3	0|1|1	persistent|permanent|transient|recurrent
+special	ordinary	0	1	1	1	1	ordinary|special
+alien	native	0	1	None
+intuitive	logical	0	1	0	4	0|0|0|0	logical|legitimate|natural|instinctive|intuitive
+reverse	forward	0	1	1	7	0|0|0|0|0|0|1	forward|bold|heroic|grand|stately|formal|normal|reverse
+bad	good	0	1	1	1	1	good|bad
+huge	colossal	0	0	0	2	0|0	colossal|enormous|huge
+careless	inattentive	0	0	None
+raw	hot	0	1	1	4	0|0|1|0	hot|beautiful|charming|natural|raw
+unequal	equal	1	1	1	1	1	equal|unequal
+elegant	classy	0	0	1	5	0|0|1|0|0	classy|cool|cold|hot|beautiful|elegant
+net	final	0	0	0	3	0|0|0	final|extreme|last|net
+rocky	smooth	0	1	1	1	1	smooth|rocky
+exceptional	uncommon	0	0	0	3	0|0|0	uncommon|special|particular|exceptional
+dull	clear	0	1	1	3	1|0|0	clear|thick|dense|dull
+desperate	safe	0	1	1	5	1|0|0|0|0	safe|wild|angry|dark|hopeless|desperate
+sound	correct	0	0	0	4	0|0|0|0	correct|nice|good|safe|sound
+basic	canonical	0	0	2	5	0|1|0|0|1	canonical|classical|modern|recent|last|basic
+frustrated	disappointed	0	0	None
+absurd	logical	0	1	1	1	1	logical|absurd
+disinterested	impartial	0	0	2	6	0|0|0|1|1|0	impartial|unbiased|equal|indifferent|interested|uninterested|disinterested
+dirty	obscene	0	0	0	3	0|0|0	obscene|filthy|foul|dirty
+stillborn	alive	0	1	None
+regular	habitual	0	0	0	4	0|0|0|0	habitual|usual|ordinary|normal|regular
+buoyant	heavy	0	1	None
+ambiguous	double	0	0	None
+circular	rotary	0	0	None
+upbeat	downbeat	0	1	1	1	1	downbeat|upbeat
+vague	hazy	0	0	None
+celestial	earthly	0	1	1	2	1|0	earthly|divine|celestial
+frugal	thrifty	0	0	None
+autotrophic	heterotrophic	0	1	1	1	1	heterotrophic|autotrophic
+talented	untalented	1	1	1	1	1	untalented|talented
+strange	wonderful	0	0	0	1	0	wonderful|strange
+romantic	practical	0	1	3	5	1|0|1|1|0	practical|imaginative|fanciful|real|fictional|romantic
+greasy	oily	0	0	0	1	0	oily|greasy
+candid	fair	0	0	0	1	0	fair|candid
+full	ample	0	0	2	3	1|1|0	ample|little|broad|full
+rainy	wet	0	0	2	3	1|0|1	wet|arid|dry|rainy
+uninfected	infected	1	1	None
+relative	relevant	0	0	0	1	0	relevant|relative
+central	cardinal	0	0	3	5	1|1|0|1|0	cardinal|second|first|early|middle|central
+communicable	incommunicable	1	1	1	1	1	incommunicable|communicable
+hungry	thirsty	0	0	None
+agrarian	urban	0	1	None
+white	clean	0	0	2	2	1|1	clean|black|white
+reusable	expendable	0	1	None
+tremendous	small	0	1	1	2	1|0	small|enormous|tremendous
+quiet	mild	0	0	0	2	0|0	mild|gentle|quiet
+global	worldwide	0	0	2	2	1|1	worldwide|local|global
+light	clean	0	0	0	1	0	clean|light
+risky	safe	0	1	1	2	1|0	safe|dangerous|risky
+large	liberal	0	0	0	2	0|0	liberal|broad|large
+inconsistent	consistent	1	1	1	1	1	consistent|inconsistent
+contrary	adverse	0	0	0	1	0	adverse|contrary
+desperate	depressed	0	0	1	5	0|0|1|0|0	depressed|low|light|dark|hopeless|desperate

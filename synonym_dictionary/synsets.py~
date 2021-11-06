@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+import numpy as np
+from numpy import linalg
+import annoy,gensim,sys,os,argparse,scipy,pdb
+
+import sklearn
+from sklearn.preprocessing import normalize
+
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+from sklearn.metrics.pairwise import cosine_similarity
+import editdistance
+
+labels = ['synonym', 'antonym']
+
+def load_triples(file, labels):
+    res = []
+    with open(file, 'r') as fd:
+        for line in fd:
+            fields = line.rstrip().split()
+            h,r,t = fields[0:3]
+            print('\t'.join(['triples', labels[h], h, r, labels[t], t, file]))
+            res.append([labels[h], r, labels[t]])
+    return res
+

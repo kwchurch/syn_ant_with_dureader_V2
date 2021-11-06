@@ -1,0 +1,483 @@
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+tr -d '\r' < 51155-0.txt |
+sed 's/[\[][^\[]*$//g' |
+awk '$1 == "=" {k=lab=""}
+/End of the Project Gutenberg/ {exit 0}
+$1 == "KEY:" {m = match($2, /_.[nv][^a-zA-Z]*$/); 
+              if(m) {k = substr($2,1,RSTART-1)} else {k = $2}; 
+        next}; 
+$1 == "SYN:" {lab="synonym"}
+$1 == "ANT:" {lab="antonym"}
+k && lab {for(i=1;i<=NF;i++) print k, $i, lab}' OFS="\t" |
+awk 'BEGIN {bad["="] = bad["ANT:"] = bad["SYN:"]}; !($2 in bad)' |
+tr 'A-Z' 'a-z' | tr -d '.,' | awk 'NF == 3 && $1 !~ /[^a-zA-Z]/ && $2 !~ /[^a-zA-Z]/' | 
+# remove duplicate edges
+sort -u > dicts/dict.bak
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+awk '{killroy[$1, $2]++}; END {while(getline < "dicts/dict.bak" > 0) if(killroy[$1,$2] == 1) {print}}' dicts/dict.bak > dicts/dict
+
+# cd lists; rm synonym antonym; awk '{print $1, $2 >> $3}' ../dict
+
+cd /mnt/home/kwc/morphology/synonym_dictionary/dicts
+awk 'function antmorph(a,b) {dlen = length(b) - length(a)
+		 	  if(dlen == 0) return 0
+			  if(dlen < 0) return antmorph(b,a)
+			  if(substr(b, 1, length(a)) == a && substr(b, length(a)+1) in antsuffix) return 1
+			  if(substr(b, dlen+1) == a && substr(b, 1, dlen) in antprefix) return 1
+			  return 0}		     
+BEGIN { print "word1\tword2\tantmorph\tlab"
+        FS=OFS="\t"
+        antprefix["de"] = 1
+        antprefix["a"] = 1
+	antprefix["un"] = 1
+	antprefix["non"] = 1
+	antprefix["in"] = 1
+	antprefix["ir"] = 1
+	antprefix["anti"] = 1
+	antprefix["il"] = 1
+	antprefix["dis"] = 1
+	antprefix["counter"] = 1
+	antprefix["im"] = 1
+	antprefix["an"] = 1
+	antprefix["sub"] = 1
+	antprefix["ab"] = 1
+	antsuffix["less"] = 1
+
+	lab["synonym"]=0
+	lab["antonym"]=1}
+
+{ print $1, $2, antmorph($1,$2), lab[$3] }' dict > dict.tsv
+
+awk 'NR == 1  {next};
+    {r = rand()}
+    r < 0.8 {print $0 > "tag-fallows-pairs.train"; next}
+    r < 0.9 {print $0 > "tag-fallows-pairs.val"; next}
+            {print $0 > "tag-fallows-pairs.test"; next}' dict.tsv
+
+
+cp tag-fallows-pairs.train tag-fallows-pairs.val tag-fallows-pairs.test /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag/
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag
+for f in tag-fallows-pairs.*
+do
+awk 'rand() < 0.1' $f > `echo $f | sed 's/fallows/fallows-small/'`
+done
+
+
+# cd /mnt/home/kwc/morphology/synonym_dictionary/dicts
+# mv fallows.train fallows.bak
+# awk 'rand() < 0.1 {print $0 > "fallows.val"; next}; {print}' fallows.bak > fallows.train
+
+# awk 'function antmorph(a,b) {dlen = length(b) - length(a)
+# 		 	  if(dlen == 0) return 0
+# 			  if(dlen < 0) return antmorph(b,a)
+# 			  if(substr(b, 1, length(a)) == a && substr(b, length(a)+1) in antsuffix) return 1
+# 			  if(substr(b, dlen+1) == a && substr(b, 1, dlen) in antprefix) return 1
+# 			  return 0}		     
+# BEGIN { FS=OFS="\t"
+#         antprefix["de"] = 1
+#         antprefix["a"] = 1
+# 	antprefix["un"] = 1
+# 	antprefix["non"] = 1
+# 	antprefix["in"] = 1
+# 	antprefix["ir"] = 1
+# 	antprefix["anti"] = 1
+# 	antprefix["il"] = 1
+# 	antprefix["dis"] = 1
+# 	antprefix["counter"] = 1
+# 	antprefix["im"] = 1
+# 	antprefix["an"] = 1
+# 	antprefix["sub"] = 1
+# 	antprefix["ab"] = 1
+# 	antsuffix["less"] = 1
+
+# 	lab["synonym"]=0
+# 	lab["antonym"]=1}
+
+# $1 ~ /^[a-zA-Z]*$/ && $2 ~ /^[a-zA-Z]*$/ && $NF == 1 && $3 in lab { print $1, $2, antmorph($1,$2), lab[$3] }' dict.tsv > fallows.test
+
+
+
+VADdir=/mnt/big/kwc/useful_resources/NRC-VAD-Lexicon-Aug2018Release/OneFilePerLanguage
+
+
+ALL=/mnt/big/kwc/morphology/wordnet/multilingual/dict/all.K32.w2v.annoy,/mnt/big/kwc/bilingual_lexicon_induction/dictionaries/embeddings/all.K32.w2v.annoy,/mnt/big/kwc/useful_resources/NRC-VAD-Lexicon-Aug2018Release/OneFilePerLanguage/all.K32.w2v.annoy
+VAD2=/mnt/big/kwc/useful_resources/NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon
+queues=CPUx40,1080Ti_short,1080Ti,2080Ti,TitanXx8_mlong,TitanXx8
+GNews=/mnt/scratch/kwc/word2vec/precomputed/GoogleNews-vectors-negative300.txt.annoy
+Fast1=/mnt/big/kwc/useful_resources/retrofitting/output/Fast1/baseline.annoy
+
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -d ' ' -M $GNews < synonym | sed 50q
+
+
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -d '\t' 
+
+cd /mnt/big/kwc/morphology/lists3
+for f in antonym  deriv  is-a2  morph  part-of2  pertainym  rhymeP  rhymeS  substance-of2  synonym  transM  transW
+do
+echo `date` working on $f
+out=../lists3_dist2/all4/$f
+rm $out
+mkdir -p `dirname $out`
+sbatch -p $queues -i $f -o $out -e $out.err /mnt/big/kwc/morphology/cos_and_edit_dist.py -d ' '  -H $hists -M $ALL,$GNews,$Fast1  -F $VAD2 -p 'en:'
+done
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p cos_and_edit2
+for f in lists/synonym lists/antonym
+do
+outf=cos_and_edit2/`basename $f`
+echo `date` : working on $f		    
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -d ' ' -M VAD,GNews300,Fast1,WN.ProNE.K300.T20.O2,MUSE.ProNE.K300.T20,WN.ProNE.K300.T20  < $f > $outf
+done
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p cos_and_edit3
+for f in lists/synonym lists/antonym
+do
+outf=cos_and_edit3/`basename $f`
+echo `date` : working on $f		    
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -d ' ' -M syn.noun,syn.verb,syn.adj  < $f > $outf
+done
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p cos_and_edit5
+for f in /mnt/home/kwc/morphology/MoE-ASD-main/dataset/*.test
+do
+outf=cos_and_edit5/`basename $f`
+echo `date` : working on $f
+cut -f1,2 < $f | 
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -M syn.ant.noun,syn.ant.verb,syn.ant.adj,syn.noun,syn.verb,syn.adj,VAD  > $outf
+done
+
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p cos_and_edit8
+for f in /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag/*.val
+do
+outf=cos_and_edit8/`basename $f`
+echo `date` : working on $f
+cut -f1,2 < $f | 
+/mnt/big/kwc/morphology/cos_and_edit_dist.py -M syn.ant.noun,syn.ant.verb,syn.ant.adj,syn.noun,syn.verb,syn.adj,VAD,GNews300,WNews300,MUSE.ProNE.K300.T20,VAD.ProNE.K300.T20 > $outf
+done
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p paths7
+for f in /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag/*.val
+do
+outf=paths7/`basename $f`
+train=`dirname $f`/`basename $f .val`.train
+echo `date` : working on $f
+python paths.py $train  < $f > $outf
+done
+
+
+
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+mkdir -p VAD
+for f in lists/synonym lists/antonym
+do
+outf=VAD/`basename $f`
+echo `date` : working on $f		    
+awk -v VAD2=$VAD2 'BEGIN {while(getline < VAD2 > 0) x[$1]=$0};
+                   $1 in x && $2 in x { print x[$1], x[$2]}' $f |
+		   awk '{ dV = $2 - $6; dA = $3 - $7; dD = $4 - $8
+		          print sqrt( dV*dV + dA*dA + dD*dD), $0}' > $outf
+done
+
+python $HOME/morphology/VAD_classification3.py -F VAD -D dicts/dict.tsv -m NearestNeighbors
+
+for d in 5 6 7 8 9 10 11 12 13
+do
+python $HOME/morphology/VAD_classification3.py -F VAD -D dicts/dict.tsv -m DecisionTree -d $d
+done
+
+n=10
+d=10
+python $HOME/morphology/VAD_classification3.py -F VAD,GNews300,MUSE.ProNE.K1024.T20 -D dicts/dict.tsv -m NearestNeighbors -d $d -n $n
+
+
+mkdir todo
+n=10
+d=10
+for N in 0 1
+do
+for M in VAD GNews300 MUSE.ProNE.K300.T20 VAD,GNews300 GNews300,MUSE.ProNE.K300.T20 VAD,MUSE.ProNE.K300.T20 VAD,GNews300,MUSE.ProNE.K300.T20
+do
+for m in NearestNeighbors LinearSVM RBFSVM GaussianProcess DecisionTree RandomForest NeuralNet AdaBoost NaiveBayes QDA
+do
+echo python $HOME/morphology/VAD_classification3.py -F $M -D dicts/dict.tsv -m $m -d $d -n $n -N $N
+done
+done
+done > todo/all
+
+
+awk '{f=sprintf("todo/%04d.sh", NR); print "#!/bin/sh" > f; print $0 > f; close(f)}' todo/all
+
+for f in todo/*.sh
+do
+outf=`dirname $f`/`basename $f .sh`.out
+errf=`dirname $f`/`basename $f .sh`.err
+sbatch -p CPUx40,CPU_only -o $outf -e $errf $f
+done
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"; print "word1	word2	lab	test"}
+{print $1, $2, lab[$3], 1}' ../MoE-ASD-main/dataset/adjective-pairs.test  > dicts/MoE_adj.tsv
+
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"}
+{print $1, $2, lab[$3], 0}' ../MoE-ASD-main/dataset/adjective-pairs.train ../MoE-ASD-main/dataset/adjective-pairs.val  >> dicts/MoE_adj.tsv
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"; print "word1	word2	lab	test"}
+{print $1, $2, lab[$3], 1}' ../MoE-ASD-main/dataset/noun-pairs.test  > dicts/MoE_noun.tsv
+
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"}
+{print $1, $2, lab[$3], 0}' ../MoE-ASD-main/dataset/noun-pairs.train ../MoE-ASD-main/dataset/noun-pairs.val  >> dicts/MoE_noun.tsv
+
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"; print "word1	word2	lab	test"}
+{print $1, $2, lab[$3], 1}' ../MoE-ASD-main/dataset/verb-pairs.test  > dicts/MoE_verb.tsv
+
+awk 'BEGIN {OFS="\t"; lab[0]="synonym"; lab[1]="antonym"}
+{print $1, $2, lab[$3], 0}' ../MoE-ASD-main/dataset/verb-pairs.train ../MoE-ASD-main/dataset/verb-pairs.val  >> dicts/MoE_verb.tsv
+
+
+# Massive leakage
+awk 'BEGIN {while(getline < "MoE_adj.tsv" > 0) x[$1,$2]=1}; $2 SUBSEP $1 in x  {sym++}; END {print sym/NR, sym, NR}' MoE_adj.tsv
+awk 'BEGIN {while(getline < "MoE_noun.tsv" > 0) x[$1,$2]=1}; $2 SUBSEP $1 in x {sym++}; END {print sym/NR, sym, NR}' MoE_noun.tsv 
+awk 'BEGIN {while(getline < "MoE_verb.tsv" > 0) x[$1,$2]=1}; $2 SUBSEP $1 in x {sym++}; END {print sym/NR, sym, NR}' MoE_verb.tsv 
+
+# check for triangles
+
+
+# use the training set to build equiv classes on syn
+# if you see a pair, (x,y), in the test set where class[x] == class[y], then output synonym
+# if you see a pair, (x,y), where there is an xi in class[x] and a yj in class[y] such that antonym(xi, yj) is a antonym in the training set, then output antonym
+# question: how much do these heuristics cover the test sets in the benchmarks?
+# Do these heuristics cause errors?
+
+awk 'BEGIN {good["unusual"] = good["familiar"] = good["common"] = good["odd"] = good["peculiar"] = good["strang"]=1}; $1 in good && $2 in good' dicts/MoE_adj.tsv | sort -k3
+common	unusual	antonym	0
+unusual	common	antonym	0
+familiar	unusual	antonym	1
+odd	familiar	antonym	1
+peculiar	familiar	antonym	1
+unusual	familiar	antonym	1
+common	familiar	synonym	0
+familiar	common	synonym	0
+peculiar	odd	synonym	0
+peculiar	unusual	synonym	0
+odd	unusual	synonym	1
+
+
+cat adjective-pairs.train adjective-pairs.val | awk '$3 == 0 {print "en:" $1 "\ten:" $2}' > /tmp/x; 
+python /mnt/big/kwc/morphology/dict_to_embedding.py -i /tmp/x -m ProNE -o adjective_pairs.out -K 300 -T 20
+awk 'NR == 1 {print; next}; {print substr($0, 4)}' adjective_pairs.out.ProNE.K300.T20.O5.w2v > adjective_pairs.w2v
+python $HOME/kwc_word2vec/w2v_to_annoy.py adjective_pairs.w2v
+
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset
+for pos in adjective noun verb
+do
+cat ${pos}-pairs.train ${pos}-pairs.val | awk '$3 == 0 {print "en:" $1 "\ten:" $2}' | awk '{print $1, $2; print $2, $1}' OFS="\t" > /tmp/x; 
+python /mnt/big/kwc/morphology/dict_to_embedding.py -i /tmp/x -m ProNE -o ${pos}_pairs.out -K 300 -T 20
+awk 'NR == 1 {print; next}; {print substr($0, 4)}' ${pos}_pairs.out.ProNE.K300.T20.O5.w2v > ${pos}_pairs.w2v
+python $HOME/kwc_word2vec/w2v_to_annoy.py ${pos}_pairs.w2v
+done
+
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset
+for pos in adjective noun verb
+do
+echo $pos
+cat $pos-pairs.train $pos-pairs.val | awk '{print "en:" $1 "\ten:" $2}' | awk '{print $1, $2; print $2, $1}' OFS="\t"  > /tmp/x; 
+python /mnt/big/kwc/morphology/dict_to_embedding.py -i /tmp/x -m ProNE -o "$pos"_pairs2.out -K 300 -T 20
+awk 'NR == 1 {print; next}; {print substr($0, 4)}' "$pos"_pairs2.out.ProNE.K300.T20.O5.w2v > "$pos"_pairs2.w2v
+python $HOME/kwc_word2vec/w2v_to_annoy.py "$pos"_pairs2.w2v
+done
+
+VAD=/mnt/scratch/kwc/useful_resources/NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon.txt
+cd /mnt/home/kwc/morphology/synonym_dictionary
+awk -v VAD=$VAD 'function dist(a,b) {if(a in V && b in V) { dV = V[a] - V[b]; dA = A[a] - A[b]; dD = D[a] - D[b]; return sqrt(dV*dV + dA*dA + dD*dD)} else {return "NA"}}
+                 function antmorph(a,b) {dlen = length(b) - length(a)
+		 	  if(dlen == 0) return 0
+			  if(dlen < 0) return antmorph(b,a)
+			  if(substr(b, 1, length(a)) == a && substr(b, length(a)+1) in antsuffix) return 1
+			  if(substr(b, dlen+1) == a && substr(b, 1, dlen) in antprefix) return 1
+			  return 0}		     
+$1 == "#" {header = header " " $NF}; 
+$1 == "sim" {print header " word1 word2 gold VAD.dist ant.morph"};
+# de, a, un, non, in, ir, anti, il, dis, counter, im, an, sub, ab
+BEGIN { antprefix["de"] = 1
+        antprefix["a"] = 1
+	antprefix["un"] = 1
+	antprefix["non"] = 1
+	antprefix["in"] = 1
+	antprefix["ir"] = 1
+	antprefix["anti"] = 1
+	antprefix["il"] = 1
+	antprefix["dis"] = 1
+	antprefix["counter"] = 1
+	antprefix["im"] = 1
+	antprefix["an"] = 1
+	antprefix["sub"] = 1
+	antprefix["ab"] = 1
+	antsuffix["less"] = 1
+while(getline < VAD > 0) {V[$1]=$2; A[$1]=$3; D[$1]=$4}
+       while(getline < "../MoE-ASD-main/dataset/adjective-pairs.test" > 0) gold[$1,$2]=$3}; 
+    {word1 = $(NF-1); word2 = $NF}
+word1 SUBSEP word2 in gold {print $1, word1, word2, gold[word1, word2], dist(word1, word2), antmorph(word1,word2)}' cos_and_edit5/adjective-pairs.test |
+ tr '|' ' '  > /tmp/z
+
+R
+x = read.table("/tmp/zz", header=T)
+library(rpart)
+library(rpart.plot)
+x$parity=x$antonym.edges %% 2
+# g = rpart(gold ~ parity + syn.ant.adj + syn.adj + VAD.dist + ant.morph, data = x, method = 'class')
+# g = rpart(gold ~ is.na(antonym.edges) + is.na(VAD.dist) + antonym.edges + edges + VAD.dist + ant.morph, data = x, method = 'class')
+g = rpart(gold ~ parity + is.na(antonym.edges) + ant.morph + VAD.dist + is.na(VAD.dist), data = x, method = 'class')
+# g = rpart(gold ~ (antonym.edges %% 2), data = x, method = 'class')
+g = rpart(gold ~ parity + is.na(parity) + VAD.dist, data = x, method = 'class')
+rpart.plot(g)
+yhat = predict(g, x, type='class')
+mean(yhat == x$gold)
+
+
+
+cat ../MoE-ASD-main/dataset/adjective-pairs.test | python paths.py ../MoE-ASD-main/dataset/adjective-pairs.train  ../MoE-ASD-main/dataset/adjective-pairs.val | awk '{n[$4]++; x[$4]+=$3}; END {for(i in n) print n[i], x[i]/n[i], i}' OFS="\t" | sort -nr | sed 50q
+
+cat ../MoE-ASD-main/dataset/adjective-pairs.val | python paths.py ../MoE-ASD-main/dataset/adjective-pairs.train | awk '{n[$4]++; x[$4]+=$3}; END {for(i in n) print n[i], x[i]/n[i], i}' OFS="\t" | sort -nr
+cd /mnt/home/kwc/morphology/synonym_dictionary
+cat ../MoE-ASD-main/dataset/adjective-pairs.test | python paths.py ../MoE-ASD-main/dataset/adjective-pairs.train | cut -f4,5 | awk 'BEGIN {print "antonym.edges", "edges"}; {print}' | sed 's/None/NA NA/' | paste /tmp/z - > /tmp/zz
+
+sdir=/mnt/home/kwc/morphology/synonym_dictionary
+MoEdir=/mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag
+VAD=/mnt/scratch/kwc/useful_resources/NRC-VAD-Lexicon-Aug2018Release/NRC-VAD-Lexicon.txt
+mkdir -p $sdir/combo
+
+chmod +x $sdir/combine_results.sh
+
+for f in tag-adjective-pairs.val   tag-fallows-pairs.val  tag-fallows-small-pairs.val  tag-noun-pairs.val  tag-verb-pairs.val
+do
+$sdir/combine_results.sh $MoEdir/$f $sdir/cos_and_edit8/$f $sdir/paths7/$f $VAD > $sdir/combo/$f
+done
+
+
+cd $sdir/combo
+
+R
+library(rpart)
+library(rpart.plot)
+x$parity=x$ant.edges %% 2
+# g = rpart(gold ~ parity + is.na(ant.edges) + ant.morph + VAD.dist + is.na(VAD.dist), data = x, method = 'class')
+# g = rpart(gold ~ parity + is.na(parity) + VAD.dist, data = x, method = 'class')
+
+par(mfrow=c(1,2))
+g = rpart(gold ~ parity, data = x, method = 'class')
+rpart.plot(g)
+yhat = predict(g, x, type='class')
+mean(yhat == x$gold)
+
+
+g = rpart(gold ~ GNews300 + WNews300 + MUSE.ProNE.K300.T20 + VAD.ProNE.K300.T20  + VAD.dist, data = x, method = 'class')
+rpart.plot(g)
+yhat = predict(g, x, type='class')
+mean(yhat == x$gold)
+
+par(mfrow=c(2,3))
+g = rpart(gold ~ parity, data = x, method = 'class')
+rpart.plot(g, main="Parity of Number of Antonym Edges")
+
+
+par(mfrow=c(2,2))
+boxplot(split(x$VAD.dist, x$gold), names=c("synonym", "antonym"), main="VAD", ylab="Euclidean Dist")
+boxplot(split(x$WNews300, x$gold), names=c("synonym", "antonym"), main="WNews300", ylab="Cosine")
+boxplot(split(x$GNews300, x$gold), names=c("synonym", "antonym"), main="GNews300", ylab="Cosine")
+boxplot(split(x$MUSE.ProNE.K300.T20, x$gold), names=c("synonym", "antonym"), main="MUSE ProNE", ylab="Cosine")
+
+par(mfrow=c(1,2))
+y=x
+y[is.na(y)] = -1
+par(mfrow=c(2,3))
+g = rpart(gold ~ parity, data = y, method = 'class')
+rpart.plot(g, main="Parity of Number of Antonym Edges")
+
+cor(x[,c("gold", "parity", "VAD.dist", "WNews300", "GNews300", "MUSE.ProNE.K300.T20")], use="na.or.complete")
+                     gold parity VAD.dist WNews300 GNews300 MUSE.ProNE.K300.T20
+gold                 1.00   0.88     0.53    -0.30    -0.27               -0.33
+parity               0.88   1.00     0.51    -0.27    -0.24               -0.31
+VAD.dist             0.53   0.51     1.00    -0.20    -0.20               -0.28
+WNews300            -0.30  -0.27    -0.20     1.00     0.86                0.42
+GNews300            -0.27  -0.24    -0.20     0.86     1.00                0.42
+MUSE.ProNE.K300.T20 -0.33  -0.31    -0.28     0.42     0.42                1.00
+
+
+    &                 gold & parity & VAD.dist & WNews300 & GNews300 & MUSE.ProNE \\ \hline
+gold &                1.00 &  0.88  &   0.53  &  -0.30    & -0.27    &       -0.33 \\
+parity    &           0.88 &  1.00  &   0.51  &  -0.27    & -0.24    &           -0.31 \\
+VAD.dist   &          0.53 &  0.51  &   1.00  &  -0.20    & -0.20    &           -0.28 \\
+WNews300    &        -0.30 & -0.27  &  -0.20  &   1.00    &  0.86    &            0.42 \\
+GNews300     &       -0.27 & -0.24  &  -0.20  &   0.86    &  1.00    &            0.42 \\
+MUSE.ProNE    &      -0.33 & -0.31  &  -0.28  &   0.42    &  0.42    &            1.00 \\ \hline
+
+x = read.table("tag-fallows-pairs.val", header=T)
+library(rpart)
+library(rpart.plot)
+x$parity=x$ant.edges %% 2
+
+
+x$MUSE.ProNE = x$MUSE.ProNE.K300.T20
+pdf("decisionTree.parity.pdf", pointsize=16)
+g = rpart(gold ~ parity, data = x, method = 'class')
+rpart.plot(g, main="Parity")
+yhat = predict(g, x, type='class')
+mean(yhat == x$gold)
+dev.off()
+pdf("decisionTree.other5.pdf", pointsize=16)
+g = rpart(gold ~ GNews300 + WNews300 + MUSE.ProNE + VAD.dist, data = x, method = 'class')
+rpart.plot(g, main="The Other Five Features")
+yhat = predict(g, x, type='class')
+mean(yhat == x$gold)
+dev.off()
+
+
+cd /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag
+for i in 0 1 2 3 4 5 6 7 8 9
+do
+for f in fallows adjective
+do
+for piece in test train val
+do
+inf=tag-"$f"-pairs.$piece
+outf=tag-"$f"-p"$i"-pairs.$piece
+awk 'NR == 1 {T = 10^(-3 + i * 0.3)}; rand() < T' i=$i $inf > $outf
+done
+done
+done
+
+for valset in /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag/*p[0-9]*.val
+do
+for trainset in /mnt/home/kwc/morphology/MoE-ASD-main/dataset_tag/*p[0-9]*.train
+do
+# echo valset: $valset trainset: $trainset
+python paths.py $trainset < $valset|
+ awk 'NR == 1 ||  NF < 6 { next}; 
+ {n++; x += ($4 == ($5 % 2))}; 
+ END {if(n > 0) print x/n, n+0, trainset, valset}' trainset=`basename $trainset` valset=`basename $valset`
+done
+done
+
+cd /mnt/home/kwc/morphology/synonym_dictionary
+sbatch -p CPU_only -o paths_job.out -e paths_job.err paths_job.sh

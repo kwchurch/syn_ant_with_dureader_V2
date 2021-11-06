@@ -1,0 +1,754 @@
+word1	word2	antonym.edges	edges	labels	words
+abandon	castoff	0	0	None
+abandoned	upright	0	1	None
+abandon	quit	0	0	2	2	1|1	quit|occupy|abandon
+abate	magnify	0	1	None
+abbreviation	prolongation	0	1	None
+abet	dissuade	0	1	5	10	1|0|0|1|1|0|0|1|1|0	dissuade|enjoin|prescribe|indicate|falsify|justify|vindicate|uphold|discountenance|support|abet
+abide	dwell	0	0	None
+abide	tolerate	0	0	1	7	0|0|1|0|0|0|0	tolerate|suffer|allow|prohibit|check|stay|sojourn|abide
+ability	cleverness	0	0	None
+ability	maladroitness	0	1	None
+abject	groveling	0	0	None
+able	efficient	0	0	None
+abode	bivouac	0	1	None
+abominable	abhorrent	0	0	None
+abomination	evil	0	0	None
+aboriginal	immigrant	0	1	None
+abound	die	0	1	4	12	0|0|0|1|1|0|1|0|0|0|0|1	die|wither|shrivel|contract|cancel|perpetuate|confirm|vitiate|spoil|desolate|vast|waste|abound
+abridgment	annotation	0	1	None
+absence	inherency	0	1	None
+absolute	irrespective	0	0	None
+abundance	sufficiency	0	0	None
+abuse	regard	0	1	None
+abusive	offensive	0	0	None
+accelerate	obstruct	0	1	1	2	0|1	obstruct|hinder|accelerate
+accommodate	misfit	0	1	5	13	1|1|1|1|0|0|0|0|0|1|0|0|0	misfit|accord|secede|adhere|sever|divide|part|function|discharge|release|constrain|compel|oblige|accommodate
+accomplish	achieve	0	0	0	2	0|0	achieve|finish|accomplish
+accountable	absolute	0	1	1	3	0|1|0	absolute|irresponsible|answerable|accountable
+accustom	alienate	0	1	1	8	1|0|0|0|0|0|0|0	alienate|retain|hold|seize|catch|take|use|inure|accustom
+acquirement	entertainment	0	0	None
+actual	unreal	0	1	None
+actuate	impel	0	0	None
+acuity	pointedness	0	0	None
+acute	astute	0	0	None
+adapt	misapply	0	1	None
+add	extend	0	0	6	10	1|1|0|1|1|0|0|1|0|1	extend|diminish|swell|rise|settle|agitate|shuffle|mystify|eliminate|abstract|add
+address	hail	0	0	0	1	0	hail|address
+adept	adroit	0	0	None
+adulterated	vitiated	0	0	None
+advantage	superiority	0	0	None
+adversary	friend	0	1	None
+adverse	propitious	0	1	None
+affection	inclination	0	0	None
+affinity	alliance	0	0	0	2	0|0	alliance|connection|affinity
+affinity	antipathy	0	1	1	1	1	antipathy|affinity
+affirm	impugn	0	1	5	8	0|1|1|1|0|1|1|0	impugn|attack|support|discountenance|uphold|vindicate|recant|maintain|affirm
+affix	adjoin	0	0	None
+age	seniority	0	0	None
+aggrieve	annoy	0	0	4	10	1|0|1|0|0|0|1|1|0|0	annoy|rejoice|please|trouble|affliction|hardship|burden|succor|distress|grieve|aggrieve
+agile	inert	0	1	None
+agreeably	suitably	0	0	None
+agreement	compact	0	0	5	18	0|1|0|0|0|0|0|0|1|0|0|0|1|0|0|1|0|1	compact|terse|ambagious|circumlocutory|prolix|diffuse|diluted|weak|watery|rich|deep|low|mean|magnificent|grand|important|light|understanding|agreement
+aid	thwart	0	1	3	3	1|1|1	thwart|serve|resist|aid
+ailment	health	0	1	None
+akin	allied	0	0	None
+allege	deny	0	1	4	7	0|1|0|1|1|1|0	deny|refuse|stipulate|contract|spread|secrete|say|allege
+ally	baffler	0	1	None
+amiss	abortive	0	0	None
+anger	vexation	0	0	None
+angry	excited	0	0	None
+angry	incensed	0	0	None
+annex	append	0	0	None
+anon	shortly	0	0	None
+answer	reply	0	0	None
+appearance	unlikelihood	0	1	None
+appease	provoke	0	1	None
+appended	concomitant	0	0	None
+appetite	loathing	0	1	None
+applicable	convenient	0	0	None
+apposite	congruous	0	0	None
+approach	departure	0	1	None
+ardent	fiery	0	0	None
+argue	establish	0	0	None
+army	fewness	0	1	None
+askant	rectilinearly	0	1	None
+asperity	roughness	0	0	9	16	1|0|1|0|1|0|1|1|1|0|0|1|1|1|0|0	roughness|blandishment|coaxing|compulsion|obligation|choice|dainty|common|odd|even|equal|like|abominate|love|enmity|acrimony|asperity
+assemble	muster	0	0	None
+assert	contradict	0	1	3	7	1|0|1|0|1|0|0	contradict|concede|vouchsafe|refuse|deny|accept|avow|assert
+assign	intrust	0	0	None
+attach	conciliate	0	0	5	8	1|1|0|0|1|1|1|0	conciliate|alienate|retain|hold|halt|advance|stop|communicate|attach
+attack	charge	0	0	2	12	0|0|0|0|0|1|0|0|0|0|0|1	charge|command|precept|order|reason|cause|follow|attend|tend|aid|assist|support|attack
+attain	compass	0	0	8	15	0|0|1|1|1|1|0|1|1|0|0|0|1|1|0	compass|encircle|enclose|develop|waste|earn|spend|exhaust|augment|wear|doll|assume|take|surrender|secure|attain
+attemper	medicate	0	0	None
+austere	genial	0	1	5	5	1|1|1|1|1	genial|stiff|yielding|tough|tender|austere
+authenticate	substantiate	0	0	None
+avarice	cupidity	0	0	None
+awful	unimposing	0	1	None
+backbiter	defender	0	1	None
+banish	eject	0	0	7	11	1|1|1|0|0|1|1|0|1|0|1	eject|welcome|reject|bear|hold|halt|advance|oppose|check|cherish|harbor|banish
+banter	argument	0	1	None
+barbarous	ferocious	0	0	None
+base	cheap	0	0	6	9	1|1|1|0|1|0|0|1|1	cheap|gorgeous|beggarly|grand|magnificent|mean|low|abject|esteemed|base
+bashful	impudent	0	1	None
+bask	repose	0	0	None
+battle	engagement	0	0	None
+bauble	gimcrack	0	0	None
+bays	success	0	0	9	16	1|0|1|1|1|0|0|1|0|1|1|0|0|1|1|0	success|ruin|defeat|secure|surrender|take|adopt|appropriate|yield|accede|withdraw|strive|toil|work|abortion|victory|bays
+beauty	picturesqueness	0	0	None
+bend	continue	0	1	3	9	0|0|0|0|1|1|1|0|0	continue|keep|retain|hold|halt|advance|stop|move|influence|bend
+bequeath	withhold	0	1	2	9	0|1|0|0|1|0|0|0|0	withhold|grudge|satisfaction|pleasure|favor|abandon|leave|entail|demise|bequeath
+besotted	steeped	0	0	None
+betray	conserve	0	1	None
+bevy	mob	0	1	None
+bickering	wrangling	0	0	None
+bind	acquit	0	1	3	5	1|0|0|1|1	acquit|impeach|arraign|accuse|absolve|bind
+blandishment	unmannerliness	0	1	None
+blank	broad	0	0	None
+blend	run	0	1	None
+bode	narrate	0	1	4	6	1|0|0|1|1|1	narrate|fabricate|produce|propagate|suppress|record|bode
+body	collectiveness	0	0	None
+body	spirit	0	1	None
+boggle	clear	0	1	7	12	1|1|1|0|1|0|0|1|1|0|0|1	clear|encumbered|light|important|material|design|scheme|project|withdraw|strive|toil|work|boggle
+boisterous	tempestuous	0	0	2	4	1|0|0|1	tempestuous|serene|placid|calm|boisterous
+bold	fearless	0	0	None
+bold	shy	0	1	None
+bootless	effectual	0	1	None
+bottom	breast	0	0	None
+bound	border	0	0	4	10	0|0|0|0|0|1|0|1|1|1	border|verge|tend|attend|follow|result|rise|swell|reduce|extend|bound
+bound	frisk	0	0	None
+boundless	limited	0	1	7	12	0|0|1|1|0|0|0|1|1|1|1|1	limited|manifold|rare|abundant|hare|valuable|choice|dainty|common|partial|eclectic|narrow|boundless
+boundless	restricted	0	1	None
+break	conjoin	0	1	5	12	0|0|0|0|0|1|1|0|1|1|1|0	conjoin|unite|coalesce|join|communicate|promulgate|discountenance|uphold|vindicate|annul|constitute|shatter|break
+brevity	terseness	0	0	None
+bright	clever	0	0	2	11	0|0|0|0|1|0|1|0|0|0|0	clever|sharp|harsh|severe|strict|vulgar|mean|magnificent|grand|splendid|brilliant|bright
+broad	illiberal	0	1	5	7	1|1|1|1|0|0|1	illiberal|liberal|short|bland|harsh|sharp|pointed|broad
+brunt	aggression	0	0	None
+bulky	gigantic	0	0	None
+bury	conceal	0	0	2	11	0|0|0|1|0|0|0|0|0|1|0	conceal|palliate|veil|cloak|reveal|show|point|direct|teach|tell|repress|bury
+calculate	reckon	0	0	None
+calculating	improvident	0	1	5	6	1|0|1|1|1|1	improvident|politic|diplomatic|injudicious|discreet|foolish|calculating
+camp	bivouac	0	0	None
+canvass	investigate	0	0	None
+capacious	restricted	0	1	None
+capacity	incapacity	1	1	None
+capacity	parts	0	0	None
+capricious	inconstant	0	0	None
+career	course	0	0	3	16	0|1|1|0|0|0|1|0|0|0|0|0|0|0|0|0	course|run|resist|aid|tend|attend|follow|cause|reason|reasoning|thought|supposition|presumption|forwardness|proficiency|progress|career
+carp	canvass	0	0	None
+caste	lineage	0	0	None
+categorical	declaratory	0	0	None
+celebrated	distinguished	0	0	8	11	0|1|0|1|1|1|1|1|0|1|1	distinguished|illustrious|infamous|vile|valuable|cheap|gorgeous|beggarly|grand|magnificent|mean|celebrated
+celebrated	exalted	0	0	None
+censure	disapproval	0	0	None
+certain	doubtful	0	1	1	3	0|0|1	doubtful|uncertain|fallible|certain
+charlatan	enrapture	0	0	None
+cheap	worthy	0	1	None
+cheat	authenticity	0	1	None
+chew	masticate	0	0	None
+classification	division	0	1	10	13	1|1|1|1|1|0|1|1|1|1|0|1|0	division|union|disruption|league|disunion|connection|affinity|repugnance|love|abominate|like|approve|cast|classification
+clean	implicate	0	1	2	13	0|0|1|0|0|0|0|0|0|0|0|0|1	implicate|entangle|embarrass|assist|aid|tend|attend|follow|shadow|immaterial|insignificant|little|dirty|clean
+clumsy	bungling	0	0	None
+cobweb	reality	0	1	None
+coetaneous	incontemporaneous	0	1	None
+coherent	consistent	0	0	6	12	0|1|0|0|1|1|1|0|1|0|1|0	consistent|agreeable|dogged|pertinacious|stiff|yielding|tough|tender|bland|short|inadequate|complete|coherent
+collate	gather	0	0	None
+collateral	parallel	0	0	None
+compensate	requite	0	0	0	1	0	requite|compensate
+competition	race	0	0	5	10	0|0|0|1|0|1|0|1|1|1	race|progeny|descendant|seed|birth|nobility|people|community|independence|association|competition
+complaint	jubilee	0	1	None
+complement	supply	0	0	None
+completely	incompletely	1	1	None
+completely	thoroughly	0	0	None
+conciliate	alienate	0	1	1	1	1	alienate|conciliate
+confidential	secret	0	0	None
+confound	enlighten	0	1	None
+congeal	congelate	0	0	None
+congenital	coetaneous	0	0	None
+conquer	forfeit	0	1	6	11	1|0|1|1|0|1|0|0|1|0|1	forfeit|redeem|liberate|fetter|accelerate|hasten|halt|hold|occupy|abandon|resign|conquer
+consent	disagree	0	1	None
+conservative	undestroyed	0	0	None
+consolidate	bond	0	0	None
+conspicuous	magnified	0	0	None
+constant	firm	0	0	0	3	0|0|0	firm|stable|steady|constant
+constant	treacherous	0	1	3	10	0|1|0|0|0|1|0|0|1|0	treacherous|insidious|sincere|true|substantial|strong|weak|enfeebled|infirm|steady|constant
+contact	noncontact	1	1	None
+content	willing	0	0	None
+contradict	state	0	1	5	9	0|0|1|1|0|1|1|0|1	state|specify|determine|agitate|settle|agree|refuse|vouchsafe|concede|contradict
+control	coerce	0	0	6	16	1|1|1|1|0|0|0|1|0|0|0|0|0|0|1|0	coerce|seduce|deter|provoke|allay|soften|yield|supply|want|poverty|need|occasion|event|accident|chance|rule|control
+controversy	wrangle	0	0	None
+conversant	proficient	0	0	0	1	0	proficient|conversant
+converse	reverse	0	0	None
+convoy	loss	0	1	None
+cope	compromise	0	1	3	10	0|0|0|1|0|1|1|0|0|0	compromise|involve|entangle|embarrass|expedite|speed|dawdle|work|toil|strive|cope
+copy	transcript	0	0	None
+correction	chastisement	0	0	None
+countenance	sanction	0	0	None
+counteract	counterinfluence	0	0	None
+counterpart	correlative	0	1	None
+counterpart	fellow	0	0	None
+covenant	agreement	0	0	4	10	1|1|0|0|0|1|0|0|1|0	agreement|understanding|security|shelter|conceal|palliate|aggravate|increase|spread|contract|covenant
+cover	cloak	0	0	0	5	0|0|0|0|0	cloak|veil|palliate|conceal|shelter|cover
+cracked	sane	0	1	None
+crapulence	freshness	0	1	None
+crest	apex	0	0	None
+criminal	sinful	0	0	None
+critical	momentous	0	0	None
+cultivate	stifle	0	1	5	7	1|1|1|1|0|1|0	stifle|propound|withdraw|accede|demur|pause|advance|cultivate
+cumber	expedite	0	1	3	6	1|1|0|0|1|0	expedite|oppose|advance|aggrandize|promote|obstruct|cumber
+curiosity	heedlessness	0	1	None
+cut	unite	0	1	None
+dainty	rare	0	0	2	5	1|1|0|0|0	rare|abundant|hare|valuable|choice|dainty
+dead	dull	0	0	None
+deadness	life	0	1	None
+dealing	communication	0	0	None
+death	termination	0	0	None
+debar	aid	0	1	1	5	1|0|0|0|0	aid|shackle|fetter|hinder|obstruct|debar
+debase	alloy	0	0	4	19	0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0	alloy|decrement|additament|detraction|improvement|progress|proficiency|forwardness|presumption|supposition|thought|reasoning|reason|debate|contend|disagree|suit|please|rejoice|glory
+deceive	delude	0	0	None
+declaim	elaborate	0	1	None
+declaration	concealment	0	1	None
+defer	despatch	0	1	None
+degree	mark	0	0	None
+degree	measure	0	0	None
+delitescence	shirking	0	0	None
+depart	vanish	0	0	7	12	1|1|1|0|1|0|0|0|0|1|1|1	vanish|appear|abscond|show|reveal|cloak|extenuate|qualify|prepare|furnish|withhold|return|depart
+deprive	endow	0	1	5	8	0|0|1|1|1|1|0|1	endow|enrich|augment|wear|swell|reduce|replenish|satisfy|deprive
+deride	suspend	0	1	None
+detruncation	amputation	0	0	None
+detruncation	stripping	0	0	None
+devoid	wanting	0	0	None
+dignified	lofty	0	0	None
+dilatory	ardent	0	1	None
+disappoint	fulfil	0	1	7	15	0|0|0|0|0|1|1|0|1|1|0|1|1|0|1	fulfil|achieve|finish|accomplish|attain|secure|surrender|take|assume|abandon|favor|pleasure|trouble|please|rejoice|disappoint
+disciple	votary	0	0	None
+disease	indisposition	0	0	7	14	1|0|0|1|1|0|0|1|0|0|0|1|1|1	indisposition|predilection|fancy|prefer|withhold|supply|provide|agree|bicker|contend|debate|reason|lunacy|sanity|disease
+disgust	avidity	0	1	None
+display	simulate	0	1	None
+dissemble	pretend	0	1	5	9	1|1|1|0|0|1|1|0|0	pretend|detect|miss|recover|reclaim|rescue|betray|shelter|conceal|dissemble
+distant	apart	0	0	4	10	1|0|1|0|1|0|0|0|0|1	apart|close|complete|inadequate|short|liberal|generous|free|easy|accessible|distant
+distil	suck	0	1	None
+dolt	ass	0	0	None
+dolt	dullard	0	0	None
+doubt	uncertainty	0	0	6	11	1|1|0|1|0|0|0|1|1|0|1	uncertainty|security|understanding|light|shade|shadow|follow|result|rise|settle|decide|doubt
+draw	propel	0	1	4	12	0|1|1|0|0|0|0|0|1|1|0|0	propel|project|withdraw|accede|yield|bear|produce|realize|verify|misrepresent|delineate|sketch|draw
+dreed	extinguish	0	1	None
+drift	vagueness	0	1	None
+duration	prolongation	0	0	None
+echo	voice	0	1	None
+eclipse	outshine	0	0	None
+effervesce	boil	0	0	None
+effigy	image	0	0	None
+effort	ease	0	1	9	14	0|0|1|1|0|1|1|1|1|1|0|1|0|1	ease|quiet|settle|rise|succumb|submit|rescue|endanger|secure|defeat|culmination|success|adversity|unsuccess|effort
+effort	inactivity	0	1	None
+elaborate	hit	0	1	None
+elegant	graceful	0	0	None
+elementary	constituent	0	0	None
+elementary	developed	0	1	None
+element	component	0	0	None
+eligible	capable	0	0	None
+elision	ejection	0	0	None
+elliptical	pregnant	0	0	None
+elliptical	subauditive	0	0	None
+embalm	abandon	0	1	None
+embark	launch	0	0	None
+embarrass	misconcert	0	0	None
+embrace	comprehend	0	0	None
+emphatic	commonplace	0	1	None
+enamor	bewitch	0	0	None
+encircle	circumscribe	0	0	8	12	1|0|0|1|1|1|0|1|1|1|1|0	circumscribe|dilate|enlarge|swell|wear|augment|exhaust|spend|earn|waste|develop|enclose|encircle
+engaged	disengaged	1	1	None
+entwine	convolve	0	0	None
+equip	denude	0	1	2	9	0|0|1|1|0|0|0|0|0	denude|divest|dismiss|summon|relegate|convey|bear|yield|furnish|equip
+eruption	devourment	0	1	None
+essential	redundant	0	0	None
+esteem	think	0	0	None
+euphuism	purism	0	0	None
+evident	manifest	0	0	None
+example	system	0	1	2	10	0|1|0|0|0|0|0|0|0|1	system|method|conjecture|supposition|thought|reasoning|reason|sense|conscience|principle|example
+excavate	conceal	0	1	None
+excessive	superabundant	0	0	None
+excessive	superfluous	0	0	None
+exhale	evaporate	0	0	None
+exhaust	debilitate	0	0	None
+exhibit	show	0	0	None
+exigency	provision	0	1	3	9	1|0|0|0|0|0|0|1|1	provision|want|poverty|need|occasion|event|accident|chance|rule|exigency
+expostulate	abet	0	1	4	6	0|1|1|1|1|0	abet|support|betray|rescue|submit|remonstrate|expostulate
+exquisite	ordinary	0	1	3	13	1|0|1|0|1|0|0|0|0|0|0|0|0	ordinary|productions|enormous|little|elastic|hard|rugged|harsh|sharp|acute|piercing|poignant|intense|exquisite
+extinction	survival	0	1	None
+extract	quote	0	0	None
+fabric	demolition	0	1	None
+fallacy	fact	0	1	None
+falsehood	fact	0	1	None
+familiar	rare	0	1	None
+fanciful	unreal	0	0	None
+fat	emaciated	0	1	None
+fatigue	animate	0	1	1	4	1|0|0|0	animate|tire|jade|weary|fatigue
+fat	rich	0	0	5	9	0|0|0|1|1|1|1|1|0	rich|deep|low|mean|magnificent|petty|fine|affable|big|fat
+favoritism	prejudice	0	1	None
+fearful	frightful	0	0	None
+felicitous	opportune	0	0	None
+fellow	equal	0	0	None
+fetter	manacle	0	0	None
+feud	bitterness	0	0	None
+figurative	emblematical	0	0	None
+finished	incomplete	0	1	None
+firm	wavering	0	1	5	10	1|0|1|0|1|0|1|0|1|0	wavering|changeless|immutable|conventional|ordinary|productions|enormous|little|elastic|hard|firm
+fling	grasp	0	1	None
+flow	hesitate	0	1	4	9	1|1|1|0|0|0|1|0|0	hesitate|determine|agitate|settle|agree|acquiesce|repose|movement|tide|flow
+foolish	wise	0	1	3	4	0|1|1|1	wise|rational|absurd|sagacious|foolish
+forbear	indulge	0	1	4	9	1|1|0|0|1|0|0|1|0	indulge|disappoint|rejoice|please|suit|disagree|contend|dispute|forego|forbear
+forego	grasp	0	1	None
+forge	verify	0	1	None
+forward	reluctant	0	1	3	6	0|1|1|0|1|0	reluctant|loth|willing|repugnant|averse|ready|forward
+founder	planter	0	0	None
+franchise	immunity	0	0	1	10	1|0|0|0|0|0|0|0|0|0	immunity|impost|custom|use|take|assume|arrogate|claim|privilege|right|franchise
+frolic	play	0	0	None
+furnish	withhold	0	1	1	1	1	withhold|furnish
+gaud	decoration	0	1	None
+germ	nucleus	0	0	None
+glassy	transparent	0	0	None
+glorify	debase	0	1	1	2	1|0	debase|honor|glorify
+glory	ignominy	0	1	1	3	1|0|0	ignominy|celebrity|honor|glory
+gracious	ungracious	1	1	None
+grandiloquence	turgidity	0	0	None
+grand	pompous	0	0	2	3	0|1|1	pompous|gorgeous|beggarly|grand
+gregarious	consociative	0	0	None
+grieve	soothe	0	1	3	12	1|0|1|0|1|0|0|0|0|0|0|0	soothe|rouse|inflame|quiet|settle|discompose|disturb|tease|harass|chafe|vex|distress|grieve
+gross	entire	0	0	4	6	0|0|1|1|1|1	entire|complete|ample|narrow|eclectic|partial|gross
+grotesque	whimsical	0	0	None
+grounded	prepared	0	0	None
+guess	fancy	0	0	3	9	0|1|1|0|0|0|0|0|1	fancy|prefer|withhold|furnish|yield|bear|produce|effectuate|establish|guess
+habit	custom	0	0	2	2	1|1	custom|desuetude|habit
+handsome	elegant	0	0	None
+handy	near	0	0	None
+harbor	wandering	0	1	6	14	0|1|0|0|0|1|1|0|0|1|1|0|1|0	wandering|aberrant|natural|normal|seasonable|welcome|reject|bear|hold|halt|advance|oppose|check|cherish|harbor
+hardship	treat	0	1	None
+hardy	resolute	0	0	2	4	0|0|1|1	resolute|vigorous|virile|effeminate|hardy
+hardy	strong	0	0	4	6	1|1|0|0|1|1	strong|weak|resolute|vigorous|virile|effeminate|hardy
+harmless	hurtful	0	1	None
+healthy	robust	0	0	None
+hearty	insincere	0	1	None
+heathenish	unconverted	0	0	None
+hoary	white	0	0	None
+hold	retain	0	0	0	1	0	retain|hold
+honesty	honor	0	0	None
+honor	irreverence	0	1	None
+hope	trust	0	0	None
+horrible	fair	0	1	None
+huge	vast	0	0	2	6	1|1|0|0|0|0	vast|infinitesimal|immeasurable|immense|enormous|gigantic|huge
+imbibe	abjure	0	1	3	12	1|0|0|0|0|0|0|0|1|0|1|0	abjure|bide|continue|keep|retain|hold|bear|produce|propagate|fail|lose|learn|imbibe
+immaterial	spiritual	0	0	7	14	1|0|0|1|1|1|1|0|1|0|0|0|1|0	spiritual|literal|real|intrinsic|adventitious|radical|superficial|exact|particular|subject|material|important|impressive|insignificant|immaterial
+immemorial	recent	0	1	None
+immerse	air	0	1	1	2	1|0	air|steep|immerse
+immerse	dip	0	0	4	9	1|1|1|0|0|0|0|1|0	dip|rise|result|indication|mark|stamp|cast|air|steep|immerse
+impassioned	spirited	0	0	None
+impressive	imposing	0	0	0	4	0|0|0|0	imposing|splendid|grand|important|impressive
+imprisonment	incarceration	0	0	None
+inclination	proneness	0	0	None
+incomparable	matchless	0	0	None
+incrust	scrape	0	1	None
+indefeasible	unalterable	0	0	None
+indelible	indefeasible	0	0	None
+indifference	affection	0	1	None
+indigestible	crude	0	0	5	14	0|0|1|0|1|1|0|0|1|1|0|0|0|0	crude|hasty|premature|seasonable|welcome|ungrateful|acceptable|pleasant|satisfactory|illusive|solid|hard|oppressive|heavy|indigestible
+indiscoverable	discoverable	1	1	None
+indiscretion	guiltlessness	0	1	None
+inexhaustible	unwearied	0	0	None
+inexpedient	inadvisable	0	0	None
+inflame	kindle	0	0	None
+inform	edify	0	0	None
+ingenious	frank	0	0	None
+inosculate	intertwine	0	0	None
+inquisitorial	overcurious	0	0	None
+inscroll	deface	0	1	5	10	1|0|0|0|1|0|1|1|1|0	deface|adorn|endow|enrich|augment|exhaust|spend|earn|waste|flourish|inscroll
+insensate	unimpressible	0	0	None
+insipid	relishing	0	1	None
+instruct	miseducate	0	1	None
+intelligence	misapprehension	0	1	None
+interior	outside	0	1	None
+interlace	intersect	0	0	None
+intermission	pause	0	0	None
+internal	outer	0	1	None
+interpret	explain	0	0	None
+intervention	noninterference	0	1	None
+intimate	conversant	0	0	None
+introductory	prefatory	0	0	0	1	0	prefatory|introductory
+inviolate	uninjured	0	0	None
+isolate	associate	0	1	None
+jot	power	0	1	None
+jovial	gloomy	0	1	None
+joy	melancholy	0	1	3	13	1|0|1|0|0|1|0|0|0|0|0|0|0	melancholy|cheerful|gay|desolate|spoil|vitiate|confirm|verify|realize|produce|bear|transport|delight|joy
+jurisdiction	liability	0	0	None
+just	unfair	0	1	8	12	1|1|0|1|0|1|1|0|1|1|1|0	unfair|legitimate|spurious|fictitious|natural|normal|exceptional|usual|common|partial|universal|proper|just
+laborious	tedious	0	0	0	2	0|0	tedious|wearisome|laborious
+lawless	honest	0	1	None
+lawless	peaceful	0	1	None
+lax	incoherent	0	0	None
+lend	grant	0	0	3	7	0|1|0|1|0|1|0	grant|give|sell|hawk|suppress|stop|advance|lend
+lenitive	irritant	0	1	None
+lethal	genial	0	1	None
+level	floor	0	0	None
+levy	reimburse	0	1	None
+light	weighty	0	1	None
+listen	hearken	0	0	None
+listen	refuse	0	1	None
+little	inflexible	0	1	None
+lively	brisk	0	0	None
+loose	tie	0	1	4	7	0|0|1|1|1|0|1	tie|attach|communicate|stop|advance|halt|hold|loose
+lop	prune	0	0	None
+lovely	unlovable	0	1	None
+lowly	mean	0	0	2	3	0|1|1	mean|low|elevated|lowly
+ludicrous	momentous	0	1	None
+lustre	brilliancy	0	0	None
+machination	intrigue	0	0	4	11	1|1|1|0|1|0|0|0|0|0|0	intrigue|sincerity|design|material|subject|exempt|excuse|subterfuge|artifice|stratagem|plot|machination
+magnify	amplify	0	0	None
+manageable	unmanageable	1	1	None
+manage	regulate	0	0	None
+mannerism	peculiarity	0	1	None
+manners	intercourse	0	0	None
+marauder	keeper	0	1	None
+mastery	tutelage	0	1	None
+match	contest	0	0	1	4	0|0|1|0	contest|contend|disagree|suit|match
+maxim	apothegm	0	0	None
+measure	appraise	0	0	None
+measure	misapportion	0	1	None
+medicine	bane	0	1	None
+medicine	virus	0	1	None
+mediocrity	rarity	0	1	None
+medley	confusion	0	0	None
+metaphysical	notional	0	0	None
+midst	margin	0	1	None
+mincing	affected	0	0	None
+mingle	discompound	0	1	None
+minor	important	0	1	1	4	0|0|0|1	important|main|principal|capital|minor
+moderation	coolness	0	0	None
+moderation	temperance	0	0	None
+monarchical	oligarchical	0	1	None
+monastic	secular	0	1	None
+monstrous	comely	0	1	2	10	0|0|0|0|0|0|0|1|0|1	comely|suitable|uniform|constant|steady|stable|firm|hard|elastic|little|monstrous
+moral	virtuous	0	0	None
+multiplication	diminution	0	1	None
+muzzle	gag	0	0	None
+mystify	obfuscate	0	0	None
+narrow	pinched	0	0	None
+nasty	gross	0	0	None
+nice	inaccurate	0	1	None
+nimble	quick	0	0	None
+nodosity	tuberosity	0	0	None
+notoriety	whisper	0	1	None
+nutriment	starvation	0	1	None
+observation	inadvertence	0	1	None
+obstacle	hindrance	0	0	2	8	1|0|0|0|0|1|0|0	hindrance|avail|help|support|assist|aid|impediment|obstruction|obstacle
+occasion	opportunity	0	0	8	14	1|1|1|1|0|0|1|1|1|0|0|1|0|0	opportunity|omission|deed|failure|glut|gorge|swallow|economize|waste|treasure|abundance|plenitude|poverty|need|occasion
+operose	wearisome	0	0	0	3	0|0|0	wearisome|laborious|toilsome|operose
+oppose	advance	0	1	1	1	1	advance|oppose
+oppose	hinder	0	0	2	4	1|1|0|0	hinder|accelerate|stay|check|oppose
+opprobrium	reproach	0	0	None
+opulence	poverty	0	1	None
+oral	unwritten	0	0	None
+orb	circle	0	0	None
+original	terminal	0	1	None
+outrageous	excessive	0	0	4	18	0|0|1|0|1|0|1|0|0|0|0|0|0|0|0|0|1|0	excessive|extravagant|prodigal|frugal|sparing|infliction|trouble|pleasure|delight|transport|bear|hold|defend|excuse|exempt|free|generous|atrocious|outrageous
+overt	clandestine	0	1	None
+overvalue	overrate	0	0	None
+pack	compress	0	0	None
+pact	alliance	0	0	None
+paradox	proposition	0	1	None
+partial	unfair	0	0	6	9	1|1|0|1|0|1|1|0|1	unfair|legitimate|spurious|fictitious|natural|normal|exceptional|usual|common|partial
+passable	traversable	0	0	None
+pattern	shape	0	0	1	10	0|0|0|0|0|0|0|0|1|0	shape|fashion|mould|manage|rule|direction|bearing|behavior|manner|design|pattern
+pedler	hawker	0	0	None
+perceive	misobserve	0	1	None
+percussion	recoil	0	1	None
+perform	misconduct	0	1	None
+perfunctory	ardent	0	1	None
+perishable	lasting	0	1	None
+permutation	fixity	0	1	None
+pernicious	baneful	0	0	None
+perversion	caricature	0	0	5	10	1|0|0|0|1|1|0|1|0|1	caricature|imitate|follow|shadow|shade|light|important|material|design|pattern|perversion
+perversion	right	0	1	3	12	0|0|1|0|1|0|0|0|0|0|0|1	right|privilege|exemption|duty|part|sum|tenor|scope|aim|intent|design|pattern|perversion
+pester	badger	0	0	None
+pester	worry	0	0	None
+petty	contemptible	0	0	None
+petty	trifling	0	0	2	7	0|0|1|0|0|0|1	trifling|immaterial|insignificant|impressive|important|grand|magnificent|petty
+pictorial	artistic	0	0	None
+pique	umbrage	0	0	None
+pith	kernel	0	0	None
+pitiless	lenient	0	1	None
+plain	broken	0	1	None
+plant	place	0	0	5	11	1|0|1|0|0|0|0|1|1|0|1	place|disturb|discompose|settle|agree|provide|furnish|yield|stand|change|shift|plant
+plaster	renovate	0	1	None
+plenary	partial	0	1	None
+praise	puff	0	0	None
+praiseworthy	commendable	0	0	None
+precarious	peril	0	0	5	8	1|0|1|0|1|1|1|0	peril|safety|security|understanding|light|encumbered|clear|dubious|precarious
+precocious	backward	0	1	None
+preconception	copy	0	1	4	17	0|1|1|0|0|0|0|0|0|0|0|0|0|0|1|0|1	copy|likeness|original|trail|sketch|delineate|shape|fashion|mould|manage|rule|direction|bearing|behavior|manner|design|delineation|preconception
+precursor	pioneer	0	0	None
+precursory	prior	0	0	None
+prefatory	prevenient	0	0	None
+prejudice	harm	0	0	None
+prejudice	prejudgment	0	0	None
+prepare	subvert	0	1	2	11	1|0|0|0|0|0|0|1|0|0|0	subvert|ordain|decree|order|reason|debate|contend|bicker|agree|provide|furnish|prepare
+preposterous	due	0	1	None
+presume	anticipate	0	0	2	8	1|0|0|0|0|0|1|0	anticipate|remember|recal|recant|retract|disavow|deny|suppose|presume
+presumption	concession	0	0	None
+prevenient	following	0	1	None
+price	worth	0	0	None
+privilege	advantage	0	0	3	8	0|0|0|1|1|0|1|0	advantage|help|assistance|relief|exhaustion|store|collection|dispensation|privilege
+privy	cognizant	0	0	None
+probability	impossibility	0	1	None
+probable	incredible	0	1	5	11	0|0|1|1|0|1|1|1|0|0|0	incredible|fabulous|visionary|sound|partial|particular|subject|indisposed|ready|apt|likely|probable
+probity	principle	0	0	None
+proceed	progress	0	0	2	13	0|0|0|0|0|0|0|0|1|0|1|0|0	progress|proficiency|forwardness|presumption|supposition|thought|reasoning|reason|cause|follow|result|rise|originate|proceed
+proceed	stop	0	1	3	7	0|1|1|1|0|0|0	stop|suppress|propagate|reduce|swell|rise|originate|proceed
+proclaim	utter	0	0	None
+procrastination	delay	0	0	2	5	1|0|0|0|1	delay|rapidity|activity|briskness|alacrity|procrastination
+productive	barren	0	1	6	14	1|0|0|1|0|0|0|1|0|0|1|1|1|0	barren|rich|deep|low|liberal|generous|free|easy|hard|oppressive|heavy|gay|desolate|fertile|productive
+profession	occupation	0	0	None
+profit	damage	0	1	None
+profuse	excessive	0	0	None
+prognosticate	note	0	1	1	3	0|0|1	note|record|register|prognosticate
+promulgate	repress	0	1	2	11	1|0|0|0|0|0|0|0|0|1|0	repress|tell|teach|direct|point|aim|intent|object|end|stop|communicate|promulgate
+prophetic	recitative	0	1	None
+propound	recal	0	1	3	4	1|0|1|1	recal|throw|project|withdraw|propound
+prosperity	woe	0	1	None
+provision	produce	0	0	2	5	0|0|0|1|1	produce|bear|yield|supply|want|provision
+puerile	futile	0	0	None
+pugnacious	quarrelsome	0	0	None
+punch	bung	0	1	None
+pure	simple	0	0	5	9	0|1|1|1|1|0|0|0|1	simple|sickly|fresh|ordinary|signal|unimportant|little|dirty|sordid|pure
+push	pull	0	1	None
+putt	remove	0	1	None
+quaint	curious	0	0	None
+qualm	scruple	0	0	None
+quarrel	altercation	0	0	0	2	0|0	altercation|bickering|quarrel
+quell	disturb	0	1	1	9	0|1|0|0|0|0|0|0|0	disturb|discompose|settle|agree|provide|supply|yield|soften|allay|quell
+quiet	peace	0	0	6	16	0|0|1|1|1|1|0|1|0|0|0|1|0|0|0|0	peace|concord|union|disruption|league|disunion|connection|affinity|antipathy|hatred|grudge|withhold|supply|provide|agree|settle|quiet
+rabble	dregs	0	0	None
+rage	storm	0	0	None
+raise	dishonor	0	1	4	9	1|0|0|0|1|1|0|0|1	dishonor|signalize|dignify|advance|lend|refuse|agree|settle|quiet|raise
+raise	elevate	0	0	None
+rancid	sweet	0	1	None
+ready	inopportune	0	1	5	9	1|0|0|0|1|1|1|0|1	inopportune|timely|seasonable|normal|natural|aberrant|consistent|repugnant|averse|ready
+reason	apology	0	0	5	10	0|1|1|1|1|0|0|0|1|0	apology|confession|protest|bide|resist|aid|tend|attend|follow|cause|reason
+recal	callback	0	0	None
+recite	misquote	0	1	None
+record	immemoriality	0	1	None
+recovery	renovation	0	0	None
+recumbent	prostrate	0	0	None
+redeem	retrieve	0	0	None
+reduce	classify	0	0	4	8	1|1|1|0|0|0|0|1	classify|collect|shed|retain|hold|bear|produce|propagate|reduce
+reduce	restore	0	1	3	6	0|1|0|0|1|1	restore|refresh|relax|abate|diminish|extend|reduce
+refer	apply	0	0	1	9	0|0|1|0|0|0|0|0|0	apply|attach|communicate|stop|end|object|intent|aim|point|refer
+refer	misapply	0	1	None
+refit	disuse	0	1	None
+reflect	heed	0	0	None
+refractory	manageable	0	1	None
+refractory	obstinate	0	0	2	2	1|1	obstinate|docile|refractory
+refund	expend	0	1	None
+regenerate	resuscitate	0	0	None
+region	district	0	0	None
+regret	approve	0	1	7	10	1|0|1|1|1|1|1|1|0|0	approve|cast|shed|retain|alienate|conciliate|annoy|rejoice|repent|sorrow|regret
+rehearsal	repetition	0	0	None
+reimburse	embezzle	0	1	3	10	1|0|0|1|0|0|0|1|0|0	embezzle|repay|requite|compensate|bereave|rob|pillage|ravage|indemnify|satisfy|reimburse
+rein	curb	0	0	2	10	1|0|0|0|1|0|0|0|0|0	curb|release|discharge|function|part|sum|bearing|direction|rule|control|rein
+reinstate	banish	0	1	6	12	1|0|1|0|0|0|1|1|0|0|1|1	banish|harbor|cherish|check|stay|wait|bide|resist|serve|benefit|good|hurt|reinstate
+relegate	transport	0	0	0	3	0|0|0	transport|bear|convey|relegate
+remain	stay	0	0	0	3	0|0|0	stay|wait|bide|remain
+reminiscence	suggestion	0	1	None
+remiss	wanting	0	0	None
+remote	unconnected	0	0	None
+remove	dislodge	0	0	5	8	1|0|1|0|1|1|1|0	dislodge|locate|settle|rise|swell|reduce|extend|amputate|remove
+represent	portray	0	0	3	12	0|0|0|0|1|0|0|0|1|0|1|0	portray|depict|delineate|shape|formation|diagnostic|feature|mark|indicate|falsify|belie|exemplify|represent
+reprisal	reprieve	0	1	None
+repulsive	disagreeable	0	0	None
+reserve	transparency	0	1	None
+resign	abdicate	0	0	2	4	1|1|0|0	abdicate|claim|waive|abandon|resign
+resolute	irresolute	1	1	3	7	1|0|0|1|0|0|1	irresolute|firm|stable|steady|infirm|enfeebled|weak|resolute
+resolution	confusion	0	1	None
+resort	employment	0	0	None
+restoration	deprivation	0	1	9	14	1|1|1|0|0|1|0|1|0|0|1|1|1|1	deprivation|preferment|depression|delight|pleasure|satisfaction|lack|insufficiency|plenitude|abundance|treasure|waste|reparation|deterioration|restoration
+restoration	revival	0	0	None
+reticence	freedom	0	1	6	10	1|1|0|1|1|0|0|1|0|1	freedom|fate|decision|rule|instance|principle|conscience|sense|chatter|garrulity|reticence
+retinue	pomp	0	0	None
+retrospect	prospect	0	1	None
+retrospect	review	0	0	None
+reverence	irreverent	0	1	None
+revoke	enact	0	1	None
+revoke	recal	0	0	0	3	0|0|0	recal|recant|retract|revoke
+rich	fruitful	0	0	6	16	0|1|0|1|1|0|0|1|0|1|0|0|1|0|0|0	fruitful|plentiful|spare|save|endanger|cover|shelter|security|understanding|light|important|grand|magnificent|mean|low|deep|rich
+ridiculous	grave	0	1	3	14	0|0|0|1|0|0|0|0|0|0|1|1|0|0	grave|sober|rational|philosophical|loose|wanton|unrestrained|boisterous|rough|harsh|severe|indulgent|extortionate|preposterous|ridiculous
+righteous	godly	0	0	None
+right	rectitude	0	0	None
+roguery	uprightness	0	1	None
+rotation	turn	0	0	None
+rotundity	flatness	0	1	None
+safe	dangerous	0	1	None
+salient	prominent	0	0	None
+satire	laudation	0	1	None
+saying	yarn	0	1	None
+sceptic	deist	0	0	None
+scholar	schoolman	0	0	None
+secure	distrustful	0	1	None
+sedative	irritant	0	1	None
+sedulous	diligent	0	0	None
+sentiment	conviction	0	0	None
+sepulture	humation	0	0	None
+serpentine	coiled	0	0	None
+serve	accommodate	0	0	5	8	0|0|1|1|0|1|1|1	accommodate|oblige|compel|liberate|fetter|shackle|aid|resist|serve
+set	regular	0	0	6	10	1|1|1|1|0|1|1|0|0|0	regular|adventitious|radical|superficial|exact|formal|easy|hard|firm|established|set
+severe	distressing	0	0	None
+shade	largeness	0	1	None
+shadow	sham	0	0	5	11	0|0|1|1|0|0|1|0|1|1|0	sham|supposititious|counterfeit|fact|theory|scheme|design|material|important|light|shade|shadow
+shameless	unblushing	0	0	None
+sharp	careless	0	1	1	6	0|0|1|0|0|0	careless|unconcerned|easy|hard|rugged|harsh|sharp
+shed	spill	0	0	None
+shelter	expose	0	1	None
+short	unabrupt	0	1	None
+shout	exclamation	0	0	None
+show	withhold	0	1	2	7	1|0|0|0|0|1|0	withhold|furnish|prepare|qualify|extenuate|cloak|reveal|show
+shrewd	discriminating	0	0	None
+shrivel	dilate	0	1	1	7	0|0|1|0|0|0|0	dilate|enlarge|swell|diminish|dwindle|pine|wither|shrivel
+shuffle	cavil	0	0	None
+shuffle	confuse	0	0	4	12	1|0|0|0|0|0|0|1|0|1|1|0	confuse|drill|exercise|use|take|assume|doll|wear|swell|rise|settle|agitate|shuffle
+shy	audacious	0	1	None
+silence	roar	0	1	None
+silent	speechless	0	0	None
+silly	rational	0	1	None
+simple	artless	0	0	None
+simple	modified	0	1	None
+simulate	counterfeit	0	0	None
+single	sole	0	0	None
+sink	ascend	0	1	None
+situation	footing	0	0	None
+sleety	inaccuracy	0	1	None
+smart	aching	0	1	None
+smooth	soften	0	0	0	8	0|0|0|0|0|0|0|0	soften|yield|furnish|provide|agree|settle|quiet|calm|smooth
+snub	mortify	0	0	None
+sober	immoderate	0	1	None
+sociable	social	0	0	None
+solution	answer	0	0	None
+soothe	assuage	0	0	0	2	0|0	assuage|tranquillize|soothe
+sordid	selfish	0	0	3	8	1|0|0|1|1|0|0|0	selfish|generous|free|easy|hard|elastic|little|dirty|sordid
+speculate	theorize	0	0	None
+speed	postpone	0	1	None
+speedy	fleet	0	0	None
+speedy	slow	0	1	None
+spirited	courageous	0	0	None
+spite	kindliness	0	1	None
+splendid	signal	0	0	2	7	1|0|0|1|0|0|0	signal|unimportant|little|insignificant|impressive|important|grand|splendid
+spontaneous	involuntary	0	1	None
+spruce	finical	0	0	None
+stanch	unreliable	0	1	9	19	1|1|0|0|0|1|1|0|0|1|0|1|0|1|0|1|1|0|0	unreliable|authentic|unfounded|groundless|supposititious|counterfeit|fact|theory|scheme|design|material|important|light|understanding|security|shelter|surrender|secure|fast|stanch
+standard	model	0	0	None
+stand	continue	0	0	1	6	0|0|0|0|0|1	continue|keep|retain|hold|bear|yield|stand
+statute	decree	0	0	2	7	0|0|0|1|0|1|0	decree|order|reason|purpose|accident|chance|law|statute
+step	remove	0	0	7	9	0|1|1|1|1|0|1|1|1	remove|amputate|extend|reduce|propagate|fail|lose|conquer|retreat|step
+still	turbulent	0	1	None
+stipulate	bargain	0	0	None
+stratagem	device	0	0	None
+stretch	strain	0	0	None
+strict	loose	0	1	0	7	0|0|0|0|0|0|0	loose|wanton|unrestrained|boisterous|rough|harsh|severe|strict
+strife	discord	0	0	None
+striking	wonderful	0	0	None
+study	application	0	0	None
+sublime	eminent	0	0	6	9	1|1|1|1|0|1|1|0|0	eminent|humble|lordly|ignoble|grand|splendid|unimposing|proud|stately|sublime
+submit	yield	0	0	2	7	0|0|0|0|1|1|0	yield|furnish|provide|agree|settle|rise|succumb|submit
+subsidiary	unfavorable	0	1	None
+suffer	repel	0	1	1	12	0|1|0|0|0|0|0|0|0|0|0|0	repel|reject|select|adopt|take|assume|arrogate|claim|assert|avow|confess|allow|suffer
+superannuated	active	0	1	3	12	0|0|0|0|0|0|1|0|0|1|0|1	active|laborious|toilsome|hard|firm|stable|steady|infirm|enfeebled|weak|resolute|vigorous|superannuated
+superstition	skepticism	0	1	None
+supply	waste	0	1	3	6	1|0|0|1|0|1	waste|treasure|abundance|plenitude|poverty|want|supply
+supposition	presumption	0	0	0	1	0	presumption|supposition
+supposititious	genuine	0	1	8	13	1|1|1|1|1|0|0|1|0|0|1|1|0	genuine|colorable|naked|gorgeous|beggarly|grand|important|material|design|scheme|theory|fact|counterfeit|supposititious
+supreme	paramount	0	0	None
+surmise	suppose	0	0	4	8	0|1|1|1|0|0|1|0	suppose|conceive|propound|withdraw|strive|try|examine|guess|surmise
+surpass	exceed	0	0	None
+surpass	outstep	0	0	None
+survey	misobserve	0	1	None
+suspense	solicitude	0	0	2	11	0|0|0|0|1|0|0|0|1|0|0	solicitude|uneasiness|pain|offend|provoke|allay|soften|yield|accede|demur|pause|suspense
+suspicion	misgiving	0	0	2	5	0|1|0|1|0	misgiving|fear|confidence|hope|distrust|suspicion
+swarm	shoal	0	0	None
+swell	curtail	0	1	None
+swing	dangle	0	0	None
+sympathy	pity	0	0	None
+tact	critique	0	0	None
+tantalize	irritate	0	0	None
+tardy	rapid	0	1	None
+tedious	sluggish	0	0	2	4	1|0|1|0	sluggish|prompt|alert|slow|tedious
+tell	state	0	0	1	17	1|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0	state|department|province|sphere|order|arrange|form|mould|manage|rule|direction|drift|scope|aim|point|direct|teach|tell
+tempestuous	turbulent	0	0	None
+temporal	worldly	0	0	None
+tempt	decoy	0	0	5	18	1|0|0|0|0|0|0|0|0|0|0|1|1|1|0|0|1|0	decoy|warn|admonish|charge|command|precept|order|reason|reasoning|thought|supposition|assumption|bashfulness|assurance|consternation|terror|alarm|allure|tempt
+tenacious	obstinate	0	0	None
+tenor	character	0	0	1	10	0|0|0|0|0|0|0|0|1|0	character|quality|condition|situation|residence|occupation|vocation|function|part|sum|tenor
+theoretical	speculative	0	0	None
+thorny	spiny	0	0	None
+tide	current	0	0	3	8	0|0|1|1|0|0|1|0	current|present|lend|refuse|agree|acquiesce|repose|movement|tide
+time	date	0	0	None
+tint	paleness	0	1	None
+tiny	cyclopean	0	1	None
+title	designation	0	0	None
+token	demonstration	0	0	1	16	0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0	demonstration|show|point|aim|scope|drift|direction|rule|manage|mould|fashion|shape|formation|diagnostic|feature|sign|token
+toll	work	0	0	None
+torpid	senseless	0	0	8	19	0|1|1|0|0|0|1|1|0|1|1|0|0|1|1|0|0|0|0	senseless|stupid|shrewd|undiscerning|indiscriminate|mixed|alloyed|unadulterated|spurious|fictitious|positive|uncertain|ambiguous|enigmatical|broad|pointed|sharp|sarcastic|cutting|piquant
+tortuous	direct	0	1	7	16	0|0|0|0|1|0|0|1|1|1|1|1|0|0|1|0	direct|point|aim|intent|design|material|important|grand|beggarly|gorgeous|naked|colorable|candid|ingenuous|straightforward|devious|tortuous
+trail	cash	0	1	None
+transact	conduct	0	0	4	15	0|1|0|1|0|0|0|0|0|0|0|1|0|1|0	conduct|lead|leave|abandon|occupy|hold|defend|excuse|exempt|free|generous|liberal|short|inadequate|complete|transact
+transcendent	insurpassable	0	0	None
+transform	conserve	0	1	None
+transport	mortification	0	1	None
+transverse	parallel	0	1	None
+trivial	unimportant	0	0	0	4	0|0|0|0	unimportant|little|insignificant|immaterial|trivial
+trumpery	treasure	0	1	None
+turn	stability	0	1	None
+ultimate	remotest	0	0	None
+umbrage	displeasure	0	0	None
+unanswerable	unquestionable	0	0	None
+uncommon	choice	0	0	None
+understand	comprehend	0	0	2	8	0|0|0|0|0|0|1|1	comprehend|see|behold|descry|discern|observe|mark|ignore|understand
+understanding	mind	0	0	1	6	0|0|0|0|1|0	mind|attend|follow|shadow|shade|light|understanding
+uninterrupted	continuous	0	0	2	8	0|0|0|0|1|0|1|0	continuous|unceasing|perpetual|everlasting|infinite|finite|terminable|endless|uninterrupted
+union	separation	0	1	3	6	0|1|0|0|1|1	separation|disconnection|intercourse|society|association|disruption|union
+unite	combine	0	0	None
+unmistakable	manifest	0	0	None
+uphold	drop	0	1	1	3	0|1|0	drop|forego|vindicate|uphold
+urge	animate	0	0	None
+urge	bold	0	1	None
+usurp	appropriate	0	0	None
+utter	check	0	1	None
+vague	uncertain	0	0	3	9	0|0|1|0|0|1|0|0|1	uncertain|ambiguous|enigmatical|broad|coarse|common|partial|particular|specific|vague
+valid	strong	0	0	2	5	1|0|0|0|1	strong|weak|enfeebled|infirm|invalid|valid
+value	underrate	0	1	None
+vanity	reality	0	1	8	19	1|1|1|0|1|0|0|0|0|0|0|0|0|0|1|1|1|0|1	reality|pretence|openness|mask|cloak|reveal|show|point|aim|intent|object|end|stop|cessation|abeyance|force|weakness|sway|weight|trifle
+variation	mutation	0	0	None
+vibrate	quiver	0	0	None
+view	misjudge	0	1	4	15	1|0|0|1|0|1|0|1|0|0|0|0|0|0|0	misjudge|say|recite|narrate|fabricate|invent|imitate|follow|cause|reason|reasoning|thought|supposition|conjecture|speculation|view
+virgin	undefiled	0	0	None
+virtue	virulence	0	1	None
+wages	stipend	0	0	None
+warm	starved	0	1	None
+warn	deter	0	0	6	12	1|1|1|0|0|1|1|0|1|0|0|0	deter|provoke|allay|arouse|stir|instigate|curb|release|discharge|arraign|charge|admonish|warn
+warrant	undertake	0	0	4	9	0|0|0|1|1|0|0|1|1	undertake|commence|originate|rise|result|premonition|presage|portend|nullify|warrant
+watchful	incautious	0	1	None
+weak	telling	0	1	1	11	0|0|0|0|0|0|0|0|1|0|0	telling|pointed|sharp|harsh|rugged|hard|firm|stable|steady|infirm|enfeebled|weak
+welcome	repudiation	0	1	None
+whole	healthy	0	0	0	2	0|0	healthy|sound|whole
+whole	perfect	0	0	2	10	0|0|0|1|0|0|0|0|1|0	perfect|unblemished|pure|clear|dubious|scrupulous|nice|particular|partial|sound|whole
+wicked	black	0	0	None
+wider	straggle	0	0	None
+wild	chimerical	0	0	None
+wild	inhabited	0	1	None
+wild	reclaimed	0	1	None
+willful	manageable	0	1	None
+wind	wreath	0	0	None
+winnow	sift	0	0	None
+wish	crave	0	0	None
+withhold	incite	0	1	2	7	0|0|0|1|0|0|1	incite|spur|quarrel|bicker|agree|provide|furnish|withhold
+withstand	oppose	0	0	2	2	1|1	oppose|patronize|withstand
+work	frustration	0	1	6	12	0|1|1|1|0|0|1|0|1|1|0|0	frustration|defeat|secure|surrender|take|adopt|appropriate|yield|accede|withdraw|strive|toil|work
+worry	please	0	1	None
+wretched	honorable	0	1	5	9	1|1|1|1|0|0|0|0|1	honorable|cheap|gorgeous|beggarly|grand|splendid|brilliant|bright|joyous|wretched
+wrought	attempted	0	1	None

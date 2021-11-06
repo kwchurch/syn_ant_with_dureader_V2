@@ -1,0 +1,183 @@
+word1	word2	antonym.edges	edges	labels	words
+lean	list	0	0	0	10	0|0|0|0|0|0|0|0|0|0	list|border|approach|approximate|draw|write|show|look|reckon|depend|lean
+move	stay	0	1	1	2	0|1	stay|rest|move
+disappear	appear	1	1	1	1	1	appear|disappear
+increase	diminish	0	1	2	7	0|0|1|0|0|1|0	diminish|cut|ignore|notice|find|bump|raise|increase
+allow	keep	0	1	1	1	1	keep|allow
+stand	rank	0	0	None
+rise	come	0	0	1	2	0|1	come|descend|rise
+decriminalize	criminalize	1	1	1	1	1	criminalize|decriminalize
+stay	depart	0	1	1	1	1	depart|stay
+leave	relinquish	0	0	1	6	1|0|0|0|0|0	relinquish|hold|grip|take|conduct|quit|leave
+disprove	show	0	1	1	2	0|1	show|prove|disprove
+strike	miss	0	1	1	1	1	miss|strike
+applaud	condemn	0	1	None
+endeavor	try	0	0	None
+mature	perfect	0	0	0	2	0|0	perfect|complete|mature
+hydrate	dehydrate	1	1	1	1	1	dehydrate|hydrate
+shrink	grow	0	1	1	1	1	grow|shrink
+abduct	adduct	0	1	1	1	1	adduct|abduct
+persuade	dissuade	0	1	1	2	0|1	dissuade|deter|persuade
+lay	suppress	0	0	0	4	0|0|0|0	suppress|restrain|stay|rest|lay
+absorb	assimilate	0	0	0	2	0|0	assimilate|incorporate|absorb
+echo	resound	0	0	None
+turn	ferment	0	0	None
+chop	divide	0	0	None
+motivate	incite	0	0	None
+fence	argue	0	0	None
+cure	heal	0	0	None
+deprive	enrich	0	1	1	1	1	enrich|deprive
+drift	wander	0	0	None
+mediate	intercede	0	0	None
+ignore	consider	0	1	3	3	1|1|1	consider|disregard|mention|ignore
+retreat	shelter	0	0	None
+dispute	confirm	0	1	1	1	1	confirm|dispute
+catch	hitch	0	0	None
+acquit	carry	0	0	0	1	0	carry|acquit
+comment	commentate	0	0	None
+stretch	contract	0	1	1	1	1	contract|stretch
+destroy	overthrow	0	0	0	2	0|0	overthrow|overturn|destroy
+ameliorate	exacerbate	0	1	3	3	1|1|1	exacerbate|improve|decline|ameliorate
+see	discern	0	0	None
+slow	accelerate	0	1	1	1	1	accelerate|slow
+allow	proscribe	0	1	1	1	1	proscribe|allow
+listen	eavesdrop	0	0	None
+veil	unveil	1	1	1	1	1	unveil|veil
+receive	take	0	0	1	4	0|0|1|0	take|conduct|carry|borrow|receive
+catch	refrain	0	0	3	5	1|0|0|1|1	refrain|take|grip|hold|release|catch
+sharpen	soften	0	1	3	9	0|1|0|0|0|0|1|0|1	soften|break|make|give|reach|range|classify|confuse|blur|sharpen
+respect	honour	0	0	2	3	0|1|1	honour|observe|disrespect|respect
+protect	plunder	0	1	3	7	0|0|1|0|0|1|1	plunder|ravage|spoil|improve|amend|repair|destroy|protect
+thwart	frustrate	0	0	0	2	0|0	frustrate|hinder|thwart
+flee	depart	0	0	2	2	1|1	depart|stay|flee
+stand	soften	0	1	1	1	1	soften|stand
+recommend	discourage	0	1	1	3	1|0|0	discourage|encourage|urge|recommend
+trace	imitate	0	0	2	7	1|0|1|0|0|0|0	imitate|originate|rise|fall|light|pitch|track|trace
+enter	exit	0	1	1	1	1	exit|enter
+verify	assert	0	0	2	5	0|0|0|1|1	assert|vindicate|justify|prove|disprove|verify
+fizzle	fail	0	0	None
+herald	hail	0	0	None
+live	exist	0	0	None
+scatter	dot	0	0	None
+maximize	minimize	0	1	1	1	1	minimize|maximize
+tie	constrain	0	0	None
+agitate	disturb	0	0	1	6	0|0|0|1|0|0	disturb|touch|strike|take|give|move|agitate
+forget	retrieve	0	1	1	1	1	retrieve|forget
+detain	liberate	0	1	1	1	1	liberate|detain
+lack	fault	0	0	None
+leave	desist	0	0	1	4	1|0|0|0	desist|take|conduct|quit|leave
+form	constitute	0	0	0	5	0|0|0|0|0	constitute|compose|settle|decide|cast|form
+become	get	0	0	4	7	1|1|0|0|1|1|0	get|end|commence|originate|rise|wane|wax|become
+enthrone	dethrone	0	1	1	1	1	dethrone|enthrone
+employ	displace	0	1	1	1	1	displace|employ
+side	match	0	0	None
+lose	regain	0	1	1	1	1	regain|lose
+ascend	descend	0	1	1	1	1	descend|ascend
+keep	discontinue	0	1	1	2	1|0	discontinue|proceed|keep
+change	mutate	0	0	None
+allow	forbid	0	1	1	1	1	forbid|allow
+stump	speak	0	0	None
+field	bat	0	1	None
+diminish	increase	0	1	2	7	1|0|0|1|0|0|0	increase|fall|strike|take|eliminate|ignore|cut|diminish
+slow	speed	0	1	1	1	1	speed|slow
+imagine	envisage	0	0	None
+haul	veer	0	1	None
+scramble	struggle	0	0	None
+operate	act	0	0	2	5	1|1|0|0|0	act|refrain|move|give|cause|operate
+attack	invade	0	0	2	6	0|0|0|0|1|1	invade|occupy|take|consume|destroy|protect|attack
+disregard	observe	0	1	1	3	0|0|1	observe|remark|mention|disregard
+recognize	realize	0	0	None
+acquit	clear	0	0	2	2	1|1	clear|convict|acquit
+apply	resist	0	1	1	1	1	resist|apply
+encode	decipher	0	1	None
+distribute	collect	0	1	1	1	1	collect|distribute
+benefit	help	0	0	2	2	1|1	help|injure|benefit
+disconnect	connect	1	1	None
+appeal	summon	0	0	3	10	0|0|0|1|0|0|0|0|1|1	summon|convene|assemble|meet|avoid|elude|escape|run|draw|repel|appeal
+scatter	gather	0	1	5	10	0|1|1|0|1|0|0|0|1|1	gather|assemble|dismantle|raise|increase|fall|pass|extend|diffuse|concentrate|scatter
+impregnate	fertilize	0	0	None
+catch	draft	0	0	4	6	0|0|1|1|1|1	draft|order|engage|disengage|block|release|catch
+alter	continue	0	1	2	5	1|0|0|0|1	continue|quit|leave|put|fix|alter
+loan	borrow	0	1	None
+work	make	0	0	0	3	0|0|0	make|drive|labor|work
+reclaim	reform	0	0	None
+fill	discharge	0	0	1	1	1	discharge|fill
+enter	leave	0	1	1	2	0|1	leave|quit|enter
+extinguish	light	0	1	0	6	0|0|0|0|0|0	light|fall|strike|take|consume|destroy|extinguish
+believe	discredit	0	1	None
+demand	eliminate	0	1	1	1	1	eliminate|demand
+promulgate	publish	0	0	None
+obviate	need	0	1	1	2	0|1	need|require|obviate
+hold	disagree	0	1	1	1	1	disagree|hold
+lend	borrow	0	1	None
+encrypt	decrypt	0	1	1	1	1	decrypt|encrypt
+free	apply	0	1	1	1	1	apply|free
+divest	put	0	1	1	1	1	put|divest
+dead	alive	0	1	1	1	1	alive|dead
+catch	watch	0	0	2	7	0|0|0|1|0|0|1	watch|learn|acquire|absorb|emit|eject|release|catch
+recollect	forget	0	1	1	1	1	forget|recollect
+smile	frown	0	1	1	1	1	frown|smile
+conform	diverge	0	1	1	1	1	diverge|conform
+sink	bury	0	0	0	7	0|0|0|0|0|0|0	bury|cover|plow|turn|shape|regulate|settle|sink
+lament	complain	0	0	0	1	0	complain|lament
+realize	recognise	0	0	0	7	0|0|0|0|0|0|0	recognise|know|understand|take|conduct|quit|clear|realize
+cause	breed	0	0	0	5	0|0|0|0|0	breed|train|express|depict|give|cause
+behave	misbehave	0	1	None
+manifest	demonstrate	0	0	None
+port	starboard	0	1	None
+order	ordain	0	0	2	5	0|1|0|1|0	ordain|enact|revoke|withdraw|engage|order
+buck	note	0	0	None
+pass	flunk	0	1	1	1	1	flunk|pass
+mind	attend	0	0	2	6	0|0|0|1|1|0	attend|follow|embrace|accept|refuse|obey|mind
+wind	twist	0	0	None
+exhaust	beat	0	0	0	8	0|0|0|0|0|0|0|0	beat|trouble|molest|disturb|touch|strike|take|consume|exhaust
+inform	teach	0	0	None
+immortalize	record	0	0	None
+agree	disagree	1	1	1	1	1	disagree|agree
+follow	adopt	0	0	None
+intimidate	overawe	0	0	None
+prosecute	represent	0	1	1	1	1	represent|prosecute
+walk	nick	0	0	None
+disclose	tell	0	0	None
+maintain	alter	0	1	1	8	1|0|0|0|0|0|0|0	alter|fix|determine|run|draw|take|grip|hold|maintain
+designate	intend	0	0	0	3	0|0|0	intend|contemplate|design|designate
+stock	store	0	0	None
+repulse	pull	0	1	1	1	1	pull|repulse
+spread	strew	0	0	None
+present	future	0	1	None
+fall	rise	0	1	1	1	1	rise|fall
+flip	snap	0	0	None
+turn	tack	0	0	None
+reject	take	0	1	1	1	1	take|reject
+order	commission	0	0	None
+forgo	claim	0	1	1	1	1	claim|forgo
+wrap	unroll	0	1	1	1	1	unroll|wrap
+recall	supply	0	1	1	1	1	supply|recall
+participate	quit	0	1	1	1	1	quit|participate
+present	gift	0	0	0	2	0|0	gift|give|present
+terminate	get	0	1	1	1	1	get|terminate
+outrage	offend	0	0	None
+note	ignore	0	1	1	1	1	ignore|note
+exhale	inhale	0	1	1	1	1	inhale|exhale
+pursue	imitate	0	0	None
+saw	find	0	0	1	6	0|1|0|0|0|0	find|supply|recall|think|imagine|figure|saw
+scold	praise	0	1	3	13	1|1|0|0|0|0|0|0|0|0|0|1|0	praise|blame|acquit|carry|run|flow|set|dispose|order|dictate|urge|cheer|complain|scold
+darken	lighten	0	1	1	1	1	lighten|darken
+evade	dodge	0	0	0	1	0	dodge|evade
+enforce	free	0	1	1	1	1	free|enforce
+forbid	permit	0	1	1	1	1	permit|forbid
+trade	switch	0	0	None
+reserve	book	0	0	None
+cease	begin	0	1	1	1	1	begin|cease
+consume	abstain	0	1	1	1	1	abstain|consume
+discredit	believe	0	1	None
+honor	dishonor	1	1	1	1	1	dishonor|honor
+counteract	neutralize	0	0	None
+seal	unseal	1	1	1	1	1	unseal|seal
+soothe	compose	0	0	None
+praise	scold	0	1	5	11	0|1|0|1|0|1|0|0|0|1|1	scold|complain|cheer|urge|restrain|stay|quit|conduct|carry|acquit|blame|praise
+kick	cheer	0	1	0	7	0|0|0|0|0|0|0	cheer|urge|dictate|suggest|seduce|make|drive|kick
+fix	rest	0	0	1	4	1|0|0|0	rest|propel|push|put|fix
+hug	embrace	0	0	None
+follow	forego	0	1	None
+rejoice	cry	0	1	None

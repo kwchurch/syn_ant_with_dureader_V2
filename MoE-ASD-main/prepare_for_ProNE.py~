@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+import numpy as np
+import sys
+
+vocab={}
+vocab_fd = open(sys.argv[1] + '.vocab', 'w')
+
+def my_intern(word):
+    if not word in vocab: 
+        print(word, file=vocab_fd)
+        vocab[word] = len(vocab)
+    return vocab[word]
+
+
+    

@@ -6,7 +6,7 @@ unset CUDA_VISIBLE_DEVICES
 python -m paddle.distributed.launch --gpus "0" run_syn_ant.py \
     --pos adjective \
     --model_type ernie_gram \
-    --model_name_or_path ernie_gram_zh \
+    --model_name_or_path ernie_gram-zh \
     --max_seq_length 384 \
     --batch_size 12 \
     --learning_rate 3e-5 \

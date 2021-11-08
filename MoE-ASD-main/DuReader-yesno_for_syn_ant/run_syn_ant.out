@@ -1,12 +1,12 @@
-WARNING 2021-11-08 04:33:37,740 launch.py:416] Not found distinct arguments and compiled with cuda or xpu. Default use collective mode
-INFO 2021-11-08 04:33:37,741 launch_utils.py:527] Local start 1 processes. First process distributed environment info (Only For Debug): 
+WARNING 2021-11-08 05:14:00,845 launch.py:416] Not found distinct arguments and compiled with cuda or xpu. Default use collective mode
+INFO 2021-11-08 05:14:00,847 launch_utils.py:527] Local start 1 processes. First process distributed environment info (Only For Debug): 
     +=======================================================================================+
     |                        Distributed Envs                      Value                    |
     +---------------------------------------------------------------------------------------+
     |                       PADDLE_TRAINER_ID                        0                      |
-    |                 PADDLE_CURRENT_ENDPOINT                 127.0.0.1:39719               |
+    |                 PADDLE_CURRENT_ENDPOINT                 127.0.0.1:54129               |
     |                     PADDLE_TRAINERS_NUM                        1                      |
-    |                PADDLE_TRAINER_ENDPOINTS                 127.0.0.1:39719               |
+    |                PADDLE_TRAINER_ENDPOINTS                 127.0.0.1:54129               |
     |                     PADDLE_RANK_IN_NODE                        0                      |
     |                 PADDLE_LOCAL_DEVICE_IDS                        0                      |
     |                 PADDLE_WORLD_DEVICE_IDS                        0                      |
@@ -14,11 +14,11 @@ INFO 2021-11-08 04:33:37,741 launch_utils.py:527] Local start 1 processes. First
     |             FLAGS_selected_accelerators                        0                      |
     +=======================================================================================+
 
-INFO 2021-11-08 04:33:37,741 launch_utils.py:531] details abouts PADDLE_TRAINER_ENDPOINTS can be found in log/endpoints.log, and detail running logs maybe found in log/workerlog.0
-INFO 2021-11-08 04:33:47,785 launch_utils.py:340] terminate all the procs
-ERROR 2021-11-08 04:33:47,785 launch_utils.py:603] ABORT!!! Out of all 1 trainers, the trainer process with rank=[0] was aborted. Please check its log.
-INFO 2021-11-08 04:33:51,790 launch_utils.py:340] terminate all the procs
-INFO 2021-11-08 04:33:51,790 launch.py:304] Local processes completed.
+INFO 2021-11-08 05:14:00,847 launch_utils.py:531] details abouts PADDLE_TRAINER_ENDPOINTS can be found in log/endpoints.log, and detail running logs maybe found in log/workerlog.0
+INFO 2021-11-08 05:14:10,892 launch_utils.py:340] terminate all the procs
+ERROR 2021-11-08 05:14:10,892 launch_utils.py:603] ABORT!!! Out of all 1 trainers, the trainer process with rank=[0] was aborted. Please check its log.
+INFO 2021-11-08 05:14:14,897 launch_utils.py:340] terminate all the procs
+INFO 2021-11-08 05:14:14,897 launch.py:304] Local processes completed.
 -----------  Configuration Arguments -----------
 backend: auto
 elastic_server: None
@@ -38,15 +38,15 @@ scale: 0
 server_num: None
 servers: 
 training_script: run_syn_ant.py
-training_script_args: ['--pos', 'adjective', '--model_type', 'ernie_gram', '--model_name_or_path', 'ernie_gram_zh', '--max_seq_length', '384', '--batch_size', '12', '--learning_rate', '3e-5', '--num_train_epochs', '2', '--logging_steps', '200', '--save_steps', '1000', '--warmup_proportion', '0.1', '--weight_decay', '0.01', '--output_dir', './tmp/dureader-yesno/', '--device', 'gpu']
+training_script_args: ['--pos', 'adjective', '--model_type', 'ernie_gram', '--model_name_or_path', 'ernie_gram-zh', '--max_seq_length', '384', '--batch_size', '12', '--learning_rate', '3e-5', '--num_train_epochs', '2', '--logging_steps', '200', '--save_steps', '1000', '--warmup_proportion', '0.1', '--weight_decay', '0.01', '--output_dir', './tmp/dureader-yesno/', '--device', 'gpu']
 worker_num: None
 workers: 
 ------------------------------------------------
 launch train in GPU mode!
-launch proc_id:2520194 idx:0
-[32m[2021-11-08 04:33:39,458] [    INFO][0m - Downloading https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram_zh/vocab.txt and saved to /mnt/home/kwc/.paddlenlp/models/ernie_gram_zh[0m
-[32m[2021-11-08 04:33:39,458] [    INFO][0m - Downloading vocab.txt from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram_zh/vocab.txt[0m
-[31m[2021-11-08 04:33:41,473] [   ERROR][0m - Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram_zh/vocab.txt failed with code 404![0m
+launch proc_id:2522496 idx:0
+[32m[2021-11-08 05:14:03,036] [    INFO][0m - Downloading https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt and saved to /mnt/home/kwc/.paddlenlp/models/ernie_gram-zh[0m
+[32m[2021-11-08 05:14:03,038] [    INFO][0m - Downloading vocab.txt from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt[0m
+[31m[2021-11-08 05:14:05,085] [   ERROR][0m - Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt failed with code 404![0m
 Traceback (most recent call last):
   File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/transformers/tokenizer_utils.py", line 543, in from_pretrained
     file_path, default_root)
@@ -54,7 +54,7 @@ Traceback (most recent call last):
     fullpath = _download(url, root_dir, md5sum)
   File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/utils/downloader.py", line 205, in _download
     "{}!".format(url, req.status_code))
-RuntimeError: Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram_zh/vocab.txt failed with code 404!
+RuntimeError: Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt failed with code 404!
 
 During handling of the above exception, another exception occurred:
 
@@ -65,8 +65,8 @@ Traceback (most recent call last):
     tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
   File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/transformers/tokenizer_utils.py", line 547, in from_pretrained
     f"Can't load tokenizer for '{pretrained_model_name_or_path}'.\n"
-RuntimeError: Can't load tokenizer for 'ernie_gram_zh'.
-Please make sure that 'ernie_gram_zh' is:
+RuntimeError: Can't load tokenizer for 'ernie_gram-zh'.
+Please make sure that 'ernie_gram-zh' is:
 - a correct model-identifier of built-in pretrained models,
 - or a correct model-identifier of community-contributed pretrained models,
 - or the correct path to a directory containing relevant tokenizer files.

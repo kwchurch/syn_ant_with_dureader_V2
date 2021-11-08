@@ -74609,3 +74609,36 @@ Please make sure that 'ernie_gram_zh' is:
 - or a correct model-identifier of community-contributed pretrained models,
 - or the correct path to a directory containing relevant tokenizer files.
 
+Traceback (most recent call last):
+  File "run_syn_ant.py", line 275, in <module>
+    do_train(args)
+  File "run_syn_ant.py", line 138, in do_train
+    model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
+KeyError: 'ernie_gram_zh'
+[32m[2021-11-08 05:14:03,036] [    INFO][0m - Downloading https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt and saved to /mnt/home/kwc/.paddlenlp/models/ernie_gram-zh[0m
+[32m[2021-11-08 05:14:03,038] [    INFO][0m - Downloading vocab.txt from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt[0m
+[31m[2021-11-08 05:14:05,085] [   ERROR][0m - Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt failed with code 404![0m
+Traceback (most recent call last):
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/transformers/tokenizer_utils.py", line 543, in from_pretrained
+    file_path, default_root)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/utils/downloader.py", line 168, in get_path_from_url
+    fullpath = _download(url, root_dir, md5sum)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/utils/downloader.py", line 205, in _download
+    "{}!".format(url, req.status_code))
+RuntimeError: Downloading from https://paddlenlp.bj.bcebos.com/models/transformers/community/ernie_gram-zh/vocab.txt failed with code 404!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run_syn_ant.py", line 275, in <module>
+    do_train(args)
+  File "run_syn_ant.py", line 139, in do_train
+    tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
+  File "/mnt/home/kwc/venv/deepnet_examples10/lib/python3.7/site-packages/paddlenlp/transformers/tokenizer_utils.py", line 547, in from_pretrained
+    f"Can't load tokenizer for '{pretrained_model_name_or_path}'.\n"
+RuntimeError: Can't load tokenizer for 'ernie_gram-zh'.
+Please make sure that 'ernie_gram-zh' is:
+- a correct model-identifier of built-in pretrained models,
+- or a correct model-identifier of community-contributed pretrained models,
+- or the correct path to a directory containing relevant tokenizer files.
+

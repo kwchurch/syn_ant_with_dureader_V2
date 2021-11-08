@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import gc
 import collections
 import os
 import random
@@ -25,6 +26,9 @@ import paddle
 from paddle.io import DataLoader
 from args import parse_args
 import json
+
+# gc.set_debug(gc.DEBUG_LEAK)
+
 
 from paddlenlp.datasets import load_dataset
 from paddlenlp.data import Pad, Stack, Dict
@@ -111,7 +115,9 @@ def read_row(data_path):
             # print(line)
             # pdb.set_trace()
             id, word1,word2,antmorph,gold = line.strip('\n').split(',')
-            yield {'id' : id, 'question': word1, 'answer': word2, 'antmorph': antmorph, 'labels': int(gold) }
+            # yield {'id' : id, 'question': word1, 'answer': word2, 'antmorph': antmorph, 'labels': int(gold) }
+            # yield {'id' : id, 'question': word1, 'answer': word2, 'antmorph': antmorph, 'labels': gold }
+            yield {'id' : int(gold), 'question': word1, 'answer': word2, 'antmorph': antmorph}
 
 def old_read_row(data_path):
     label_symbol_table = {'0' : 'synonym', '1' : 'antonym'}
@@ -152,7 +158,9 @@ def do_train(args):
     train_batchify_fn = lambda samples, fn=Dict({
         'input_ids': Pad(axis=0, pad_val=tokenizer.pad_token_id),
         'token_type_ids': Pad(axis=0, pad_val=tokenizer.pad_token_type_id),
-        'labels': Stack(dtype="int64")
+        # 'labels': Stack(dtype="int64")
+        # 'labels': Stack()
+        'id': Stack()
     }): fn(samples)
 
     test_batchify_fn = lambda samples, fn=Dict({

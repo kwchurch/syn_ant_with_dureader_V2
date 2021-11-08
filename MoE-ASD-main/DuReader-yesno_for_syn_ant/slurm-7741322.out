@@ -1,0 +1,5 @@
+[32m[2021-11-07 09:57:48,816] [    INFO][0m - Already cached /mnt/home/kwc/.paddlenlp/models/ernie-2.0-en/vocab.txt[0m
+[32m[2021-11-07 09:57:48,885] [    INFO][0m - Already cached /mnt/home/kwc/.paddlenlp/models/ernie-2.0-en/ernie_v2_eng_base.pdparams[0m
+W1107 09:57:48.888978 1605604 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.0, Runtime API Version: 10.2
+W1107 09:57:48.917188 1605604 device_context.cc:465] device: 0, cuDNN Version: 8.0.
+slurmstepd-asimov-210: error: *** JOB 7741322 ON asimov-210 CANCELLED AT 2021-11-07T21:58:09 DUE TO TIME LIMIT ***
